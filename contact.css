@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+}
+
+/* Below are the breakpoints for smartphone screens*/
+
+@media only screen and (min-width: 320px) and (max-width: 432px) {
+
+    /* NAVIGATION MENU CODE START */
+
+    /* this gives the entire nav section a blue background color with white text */
+    .navBar {
+        background-color: #00168C;
+        color: white;
+    }
+
+    /* this puts the logo and hamburger menu in a row */
+    .navRow {
+        display: flex;
+        justify-content: space-between;
+        padding: 10% 5%;
+    }
+
+    /* this spaces out the three lines in the hamburger menu and organizes them into a column */
+    .hamburgerMenu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* this gives each line in the hamburger menu a color, height, and width */
+    #menuLine {
+        background-color: white;
+        width: 40px;
+        height: 5px;
+        border-radius: 10px;
+    }
+
+    /* this hides the nav bar links so when the onclick attribute is triggered when clicking the hamburger menu, the links will be appear */
+    .navLinks {
+        display: none;
+    }
+
+    /* this toggles the hamburger menu to show the navigation links for mobile and tablet */
+    .show {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        list-style-type: none;
+    }
+
+    /* NAVIGATION MENU CODE END */
+
+    /* FOOTER CODE START */
+
+    /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
+    footer {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 60px;
+    }
+
+    /* this sets a margin for my contact form */
+    .contact-form {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 15%;
+        gap: 10px;
+    }
+
+    /* this is for the submit button at the bottom of the page */
+    #submit {
+        border-radius: 20px;
+        padding: 10px 15px;
+        border: none;
+        margin: 5% 35%;
+    }
+
+    /* this sets an image size for the github and linkedin icons */
+    .footer-logo {
+        width: 15%;
+        height: 80%;
+    }
+
+    /* this aligns all the footer links in the center */
+    .footer-links {
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* this sets a padding for each footer link */
+    .footer-item {
+        padding: 10px;
+    }
+
+    /* FOOTER CODE END */
+}
+
+/* Below are the breakpoints for the navigation menu on tablet screens */
+
+@media only screen and (min-width: 433px) and (max-width: 768px) {
+
+    /* NAVIGATION MENU CODE START */
+
+    /* this gives the entire nav section a blue background color with white text */
+    .navBar {
+        background-color: #00168C;
+        color: white;
+    }
+
+    /* this puts the logo and hamburger menu in a row */
+    .navRow {
+        display: flex;
+        justify-content: space-between;
+        padding: 10%;
+        margin: auto;
+    }
+
+    /* this spaces out the three lines in the hamburger menu and organizes them into a column */
+    .hamburgerMenu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* this gives each line in the hamburger menu a color, height, and width */
+    #menuLine {
+        background-color: white;
+        width: 40px;
+        height: 5px;
+        border-radius: 10px;
+    }
+
+    /* this hides the nav bar links so when the onclick attribute is triggered when clicking the hamburger menu, the links will be appear */
+    .navLinks {
+        display: none;
+    }
+
+    /* this toggles the hamburger menu to show the navigation links for mobile and tablet */
+    .show {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        list-style-type: none;
+    }
+
+    /* NAVIGATION MENU CODE END */
+}
+
+@media only screen and (min-width: 433px) {
+
+    /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
+    footer {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 100px;
+    }
+
+    /* this sets a margin for my contact form */
+    .contact-form {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 15%;
+        gap: 20px;
+    }
+
+    /* this is for the submit button at the bottom of the page */
+    #submit {
+        border-radius: 20px;
+        padding: 10px 15px;
+        border: none;
+        margin: 5% 35%;
+    }
+
+    /* this sets an image size for the github and linkedin icons */
+    .footer-logo {
+        width: 10%;
+        height: 80%;
+    }
+
+    /* this aligns all the footer links in the center */
+    .footer-links {
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* this sets a padding for each footer link */
+    .footer-item {
+        padding: 10px;
+    }
+}
+
+
+.navLinks a,
+.navRow a {
+    text-decoration: none;
+    color: white;
+}
+
+/* when a nav link is pressed, text color will turn black with a white background */
+.navLinks a:active {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
