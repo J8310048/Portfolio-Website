@@ -69,3 +69,5 @@ nextBtn.addEventListener("click", () => {
 
 
 // TESTIMONIAL CAROUSEL SLIDER CODE END
+
+
