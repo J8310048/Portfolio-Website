@@ -332,7 +332,7 @@
 .navLinks a,
 .navRow a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 /* when a nav link is pressed, text color will turn black with a white background */
@@ -366,6 +366,7 @@
     display: flex;
     flex-direction: row;
     column-gap: 40px;
+    margin: auto
 }
 
 .contact-form {
