@@ -122,11 +122,15 @@ console.log(sliderItems)
 const contactForm = document.getElementById("#contactForm")
 contactForm.addEventListener("submit", (Event) => {
     Event.preventDefault //this stops the from reloading itself after clicking submit
+    const formInputs = Event.target
+    const formCapture = new URLSearchParams()
+    for (const [key, value] of formInputs.entries()) {
+        formCapture.append(key, value);
+    }
 })
 
 
-const formInputs = Event.target
-const formCapture = new URLSearchParams(new formCapture(formInputs))
+
 
 fetch("http://localhost:3000/contact", {
     method: "POST",

@@ -2,34 +2,29 @@ require('dotenv').config()
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const nodemailer = require("nodemailer");
 exports.app = app;
 const { error } = require('console');
-const nodemailer = require(nodemailer);
+const sendContactEmail = require("./public/mail.js");
+app.use(cors());
 
-app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-
-const transporter = nodemailer.createTransport({
-    service: "gmail",
-    host: process.env.EMAIL_host,
-    port: process.env.EMAIL_port,
-    secure: false,
-    auth: {
-        user: process.env.EMAIL_user,
-        pass: process.env.EMAIL_pass,
-    },
-})
-
-
-app.post("/contact", (req, res) => {
+app.post("/contact", async (req, res) => {
 
     const { customerName, email, comment } = req.body
 
-    sendContactEmail(customerName, email, comment)
-    res.status(200).send("message successful!!!!!!!!!!!!!")
+    try {
+        await sendContactEmail(customerName, email, comment);
+        res.status(200).json({ comment: "message successful!!!!!!!!!!!!!" })
+    } catch (error) {
+        console.error("Error sending message: ", error)
+        res.status(500).json({ error: "YOU FAILED TO SEND YOUR MESSAGE! WHAT IS WRONG WITH YOU?!?!" })
+    }
+
+
 
 })
 
