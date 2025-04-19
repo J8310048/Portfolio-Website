@@ -75,14 +75,19 @@ nextBtn.addEventListener("click", () => {
 
 // PROJECT CAROUSEL SLIDER CODE END
 
+
+
+// CONTACT FORM SUBMISSION START
 const contactForm = document.getElementById("contactForm")
+
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault() //this stops the from reloading itself after clicking submit
-    const formInputs = Event.target
-    const formCapture = new URLSearchParams(new FormData(formInputs))
-    for (const [key, value] of formInputs.entries()) {
-        formCapture.append(key, value);
-    }
+    const formData = new FormData(contactForm);
+    const formCapture = new URLSearchParams(formData);
+
+    console.log("Full Name:", formData.get("fullName"));
+    console.log("Email:", formData.get("email"));
+    console.log("Message:", formData.get("message"));
 
     fetch("http://localhost:3000/contact", {
         method: "POST",
@@ -98,4 +103,7 @@ contactForm.addEventListener("submit", (event) => {
         })
         .catch(err => console.error("Here's your fetch error: ", err))
 })
+// CONTACT FORM SUBMISSION END
+
+
 

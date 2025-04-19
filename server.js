@@ -16,10 +16,10 @@ app.use(express.json());
 
 app.post("/contact", async (req, res) => {
 
-    const { customerName, email, comment } = req.body
+    const { fullName, email, message } = req.body
 
     try {
-        await sendContactEmail(customerName, email, comment);
+        await sendContactEmail(fullName, email, message);
         res.status(200).json({ comment: "message successful!!!!!!!!!!!!!" })
     } catch (error) {
         console.error("Error sending message: ", error)

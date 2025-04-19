@@ -9,13 +9,13 @@ const transporter = nodemailer.createTransport({
     },
 })
 
-function sendContactEmail(customerName, email, comment) {
+function sendContactEmail(fullName, email, message) {
     const sendEmail = {
         from: process.env.EMAIL_BIZ,
         to: process.env.EMAIL_USER,
         replyTo: email,
-        subject: `Message from ${customerName}`,
-        text: `Name: ${customerName}\nEmail: ${email}\nMessage: ${comment}`
+        subject: `Message from ${fullName}`,
+        text: `Customer Name: ${fullName}\nEmail: ${email}\nComment: ${message}`
     };
 
     return transporter.sendMail(sendEmail) //Nodemailer method that sends the email object
