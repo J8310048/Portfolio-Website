@@ -6,10 +6,12 @@ const nodemailer = require("nodemailer");
 exports.app = app;
 const { error } = require('console');
 const sendContactEmail = require("./public/mail.js");
+
 app.use(cors());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 
 
 app.post("/contact", async (req, res) => {
