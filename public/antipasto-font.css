@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Antipasto-Regular-trial";
+    src: url("antipasto-font/AntipastoPro_trial.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Anitpasto-Bold-trial";
+    src: url("antipasto-font/AntipastoPro-Bold_trial.ttf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "Anitpasto-DemiBold-trial";
+    src: url("antipasto-font/AntipastoPro-DemiBold_trial.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "Anitpasto-ExtraBold-trial";
+    src: url("antipasto-font/AntipastoPro-ExtraBold_trial.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Anitpasto-Extralight-trial";
+    src: url("antipasto-font/AntipastoPro-Extralight_trial.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Anitpasto-Light-trial";
+    src: url("antipasto-font/AntipastoPro-Light_trial.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Anitpasto-Medium-trial";
+    src: url("antipasto-font/AntipastoPro-Medium_trial.ttf") format("truetype");
+}

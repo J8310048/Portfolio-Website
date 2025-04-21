@@ -1,13 +1,9 @@
-
-
-
-
 // NAV MENU CODE START
 const hamburgerMenu = document.querySelector(".hamburgerMenu");
 const navLinks = document.querySelector(".navLinks");
 
 
-// below connects the hamburger menu and navlinks together by adding an event listener to the menu and having the click event display the links by using the "show" class in the CSS file
+// below toggles the class of the navlinks from hidden to show, so when the user clicks the hamburger menu, they will toggle the secondary class of navlinks 
 hamburgerMenu.addEventListener("click", () => {
     navLinks.classList.toggle("show");
 });
