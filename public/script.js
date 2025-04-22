@@ -87,7 +87,7 @@ contactForm.addEventListener("submit", (event) => {
     console.log("Email:", formData.get("email"));
     console.log("Message:", formData.get("message"));
 
-    fetch("http://localhost:3000/contact", {
+    fetch("https://portfolio-website-pogv.onrender.com/contact", {
         method: "POST",
         headers: {
             "content-type": "application/x-www-form-urlencoded"
