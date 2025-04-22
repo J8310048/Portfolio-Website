@@ -17,6 +17,8 @@ const sliderItems = document.querySelectorAll(".projectItem")
 console.log(sliderItems)
 
 
+
+
 // below sets up how the slider will look like by default
 
 let currentIndex = 0;

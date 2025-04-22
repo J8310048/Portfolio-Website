@@ -93,7 +93,7 @@
         line-height: 1;
     }
 
-    .hero-text {
+    #hero-text {
         line-height: 2;
     }
 
@@ -227,32 +227,58 @@
         display: none;
     }
 
-    /* this toggles the hamburger menu to show the navigation links for mobile and tablet */
+    /* when a nav link is pressed, text color will turn black with a white background */
+    .navLinks,
+    .navLinks a {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        font-family: "Anitpasto-DemiBold-trial", sans-serif;
+    }
+
+    /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and tablet screens*/
     .show {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         list-style-type: none;
+        font-size: 20px;
+        row-gap: 10px;
+        padding: 5% 0;
     }
 
     /* NAVIGATION MENU CODE END */
-}
 
-/* Below is the breakpoint for tablet and desktop for the entire design of the website */
-@media only screen and (min-width: 433px) {
+
     .hero-section {
         display: flex;
         flex-direction: row-reverse;
-        padding: 10%;
+        padding: 10% 8%;
+        column-gap: 20px;
     }
 
-    /* this sets a margin and padding for the short bio paragraph underneath the photo */
-    .hero-text {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        gap: 50px;
-        padding: 0 10%;
+    /* this sets the size of my profile photo in the hero section */
+    #profilePic {
+        height: 45%;
+        width: 45%;
+        border-radius: 50px;
+    }
+
+    /* this styles the hero text and buttons together */
+    .intro {
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 10px;
+    }
+
+    #hero-header {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
+        font-size: 20px;
+    }
+
+    #hero-text {
+        font-family: "Antipasto-Regular-trial", sans-serif;
+        font-size: 15px;
     }
 
     /* this spaces out the contact me button and portfolio button */
@@ -262,12 +288,6 @@
         gap: 20px;
     }
 
-    /* this sets the size of my profile photo in the hero section */
-    #profilePic {
-        height: 40%;
-        width: 40%;
-        border-radius: 50px;
-    }
 
     /* this sets all of the content from tech stack to testimonials inside of a grid */
     .skills-section {
@@ -278,30 +298,32 @@
         row-gap: 50px;
     }
 
-    /* this sets the padding for all the logos in the tech stack and design tools section */
+    /* this sets the padding and sizes for all the logos in the tech stack and design tools section */
     .logos img {
-        padding: 5% 5%;
+        height: 20%;
+        width: 20%;
+        padding: 5%;
     }
 
-    /*  */
-    .testimonial-section {
-        display: flex;
-        flex-direction: row;
-        margin: 0 10%;
-        gap: 50px;
-        text-align: center;
+    .projectSection img {
+        height: 60vh;
+        width: 40vh;
     }
 
-    /* this sets the height and width of the photos in my testimonial section */
-    .testimonial-pic {
-        clip-path: circle(50% at 50% 50%);
-        width: 30vh;
-        height: 30vh;
+    .projectItem {
+        font-family: "Anitpasto-Light-trial", sans-serif;
     }
 
-    /* this sets a padding for each text item in the testimonial section */
-    .testimonial-item {
-        padding: 1% 32%;
+    #nextBtn {
+        /* transform: translate(-30px, -60px); */
+        max-width: 10%;
+        max-height: 10%;
+    }
+
+    #previousBtn {
+        /* transform: translate(30px, -60px); */
+        max-width: 10%;
+        max-height: 10%;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -346,14 +368,23 @@
     }
 }
 
-/* this is to improve the hero image size and text at every screensize */
-@media only screen and (min-width: 432px) and (max-width: 566px) {}
+/* this puts hero buttons in a row */
+@media only screen and (min-width: 433px) and (max-width: 525px) {
+    .hero-buttons {
+        grid-auto-flow: row;
+    }
+}
+
+
+/* Below is the breakpoint for tablet and desktop for the entire design of the website */
+@media only screen and (min-width: 769px) {}
+
 
 
 
 /* below are the global stylings for my hero buttons, contact form, and copyright tag on this page */
 
-/* this gives the entire nav section a blue background color with white text */
+/* this gives the entire nav section a blue background color */
 .navBar {
     background-color: #00168C;
 }
