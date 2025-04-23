@@ -37,36 +37,36 @@ showProject(currentIndex)
 
 
 
-const prevBtn = document.querySelector(".previous")
-console.log(prevBtn)
-const nextBtn = document.querySelector(".next")
-console.log(nextBtn)
+// const prevBtn = document.querySelector(".previous")
+// console.log(prevBtn)
+// const nextBtn = document.querySelector(".next")
+// console.log(nextBtn)
 
 
 
-// PREVIOUS BUTTON CODE START
-prevBtn.addEventListener("click", () => {
-    currentIndex = currentIndex - 1;
-    if (currentIndex < 0) {
-        currentIndex = sliderItems.length - 1 // this loops to the last project
-    }
-    console.log("This clicks!")
-    showProject(currentIndex)
-})
-// PREVIOUS BUTTON CODE END
+// // PREVIOUS BUTTON CODE START
+// prevBtn.addEventListener("click", () => {
+//     currentIndex = currentIndex - 1;
+//     if (currentIndex < 0) {
+//         currentIndex = sliderItems.length - 1 // this loops to the last project
+//     }
+//     console.log("This clicks!")
+//     showProject(currentIndex)
+// })
+// // PREVIOUS BUTTON CODE END
 
 
 
-// NEXT BUTTON CODE START
-nextBtn.addEventListener("click", () => {
-    currentIndex = currentIndex + 1;
-    if (currentIndex >= sliderItems.length) {
-        currentIndex = 0 // this loops back to the first project
-    }
-    console.log("This clicks too!")
-    showProject(currentIndex)
-})
-// NEXT BUTTON CODE END
+// // NEXT BUTTON CODE START
+// nextBtn.addEventListener("click", () => {
+//     currentIndex = currentIndex + 1;
+//     if (currentIndex >= sliderItems.length) {
+//         currentIndex = 0 // this loops back to the first project
+//     }
+//     console.log("This clicks too!")
+//     showProject(currentIndex)
+// })
+// // NEXT BUTTON CODE END
 
 
 

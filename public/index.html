@@ -152,18 +152,18 @@
 
 
     </main>
-
+    <form action="/contact" class="contact-form" method="POST" id="contactForm">
+        <label for="fullName">Name:</label>
+        <input type="text" id="fullName" name="fullName">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <label for="message" id="message">Comment:</label>
+        <textarea name="message" rows="10" cols="30"></textarea>
+        <input type="submit" value="Submit" id="submit">
+    </form>
 
     <footer>
-        <form action="/contact" class="contact-form" method="POST" id="contactForm">
-            <label for="fullName">Name:</label>
-            <input type="text" id="fullName" name="fullName">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email">
-            <label for="message" id="message">Comment:</label>
-            <textarea name="message" rows="10" cols="30"></textarea>
-            <input type="submit" value="Submit" id="submit">
-        </form>
+
 
 
         <!-- this section has links to linkedin, github, and legal pages -->

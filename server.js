@@ -12,7 +12,9 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
+app.get("/", (req, res) => {
+    res.send("The server is awaiting your response")
+})
 
 app.post("/contact", async (req, res) => {
 
