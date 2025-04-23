@@ -121,25 +121,14 @@
         padding: 5%;
     }
 
-    .projectSection img {
-        height: 50vh;
-        width: 35vh;
-    }
-
     .projectItem {
         font-family: "Anitpasto-Light-trial", sans-serif;
     }
 
+    #previousBtn,
     #nextBtn {
-        transform: translate(-30px, -60px);
-        max-width: 10%;
-        max-height: 10%;
-    }
-
-    #previousBtn {
-        transform: translate(30px, -60px);
-        max-width: 10%;
-        max-height: 10%;
+        width: 10px;
+        height: 10px;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -194,10 +183,6 @@
     /* NAVIGATION MENU CODE START */
 
     /* this gives the entire nav section a blue background color with white text */
-    .navBar {
-        background-color: #00168C;
-        color: white;
-    }
 
     /* this puts the logo and hamburger menu in a row */
     .navRow {
@@ -234,6 +219,7 @@
         color: black;
         background-color: white;
         font-family: "Anitpasto-DemiBold-trial", sans-serif;
+        font-size: 30px;
     }
 
     /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and tablet screens*/
@@ -255,6 +241,7 @@
         flex-direction: row-reverse;
         padding: 10% 8%;
         column-gap: 20px;
+        align-items: center;
     }
 
     /* this sets the size of my profile photo in the hero section */
@@ -268,17 +255,20 @@
     .intro {
         display: grid;
         grid-auto-flow: row;
-        row-gap: 10px;
+        height: 10%;
+        row-gap: 20px;
     }
 
     #hero-header {
         font-family: "Anitpasto-Bold-trial", sans-serif;
-        font-size: 20px;
+        font-size: 25px;
+        line-height: 1;
     }
 
     #hero-text {
-        font-family: "Antipasto-Regular-trial", sans-serif;
-        font-size: 15px;
+        font-family: "Anitpasto-Medium-trial", sans-serif;
+        font-size: 18px;
+        line-height: 1;
     }
 
     /* this spaces out the contact me button and portfolio button */
@@ -300,30 +290,11 @@
 
     /* this sets the padding and sizes for all the logos in the tech stack and design tools section */
     .logos img {
-        height: 20%;
-        width: 20%;
         padding: 5%;
-    }
-
-    .projectSection img {
-        height: 60vh;
-        width: 40vh;
     }
 
     .projectItem {
         font-family: "Anitpasto-Light-trial", sans-serif;
-    }
-
-    #nextBtn {
-        /* transform: translate(-30px, -60px); */
-        max-width: 10%;
-        max-height: 10%;
-    }
-
-    #previousBtn {
-        /* transform: translate(30px, -60px); */
-        max-width: 10%;
-        max-height: 10%;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -349,12 +320,6 @@
         margin: 5% 35%;
     }
 
-    /* this sets an image size for the github and linkedin icons */
-    .footer-logo {
-        width: 10%;
-        height: 80%;
-    }
-
     /* this aligns all the footer links in the center */
     .footer-links {
         text-align: center;
@@ -371,13 +336,161 @@
 /* this puts hero buttons in a row */
 @media only screen and (min-width: 433px) and (max-width: 525px) {
     .hero-buttons {
-        grid-auto-flow: row;
+        display: none;
     }
 }
 
 
 /* Below is the breakpoint for tablet and desktop for the entire design of the website */
-@media only screen and (min-width: 769px) {}
+@media only screen and (min-width: 769px) {
+
+    #websiteLogo {
+        font-size: 35px;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navLinks a {
+        color: white;
+        text-decoration: none;
+        list-style: none;
+
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 10% 20%;
+        column-gap: 60px;
+        align-items: center;
+    }
+
+    /* this sets the size of my profile photo in the hero section */
+    #profilePic {
+        height: 40%;
+        width: 40%;
+        border-radius: 50px;
+    }
+
+    /* this styles the hero text and buttons together */
+    .intro {
+        display: grid;
+        grid-auto-flow: row;
+        height: 20%;
+        row-gap: 20px;
+    }
+
+    #hero-header {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
+        font-size: 30px;
+        line-height: 1;
+    }
+
+    #hero-text {
+        font-family: "Anitpasto-Medium-trial", sans-serif;
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    /* this sets all of the content from tech stack to testimonials inside of a grid */
+    .skills-section {
+        display: grid;
+        grid-auto-flow: row;
+        text-align: center;
+        margin-top: 10%;
+        row-gap: 50px;
+    }
+
+    .midSection {
+        display: flex;
+        flex-direction: row;
+        font-family: "Anitpasto-ExtraBold-trial", sans-serif;
+        justify-content: space-around;
+
+
+        #techStack,
+        #designTools {
+            border-radius: 5px;
+            border: black solid thin;
+            padding: 3% 1%;
+            margin: auto;
+        }
+
+        #techStack,
+        #designTools {
+            width: 30%;
+        }
+
+
+        #designTools img {
+            width: 15vh;
+            height: 15vh;
+            padding: 4%;
+        }
+
+        #techStack img {
+            width: 12vh;
+            height: 12vh;
+            padding: 1%;
+        }
+    }
+
+    .projectItem {
+        font-family: "Anitpasto-Light-trial", sans-serif;
+    }
+
+    /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
+    footer {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 100px;
+    }
+
+    /* this sets a margin for my contact form */
+    .contact-form {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 15%;
+        gap: 20px;
+    }
+
+
+
+    /* this is for the submit button at the bottom of the page */
+    #submit {
+        border-radius: 20px;
+        padding: 10px 15px;
+        border: none;
+        margin: 5% 35%;
+    }
+
+
+
+    /* this aligns all the footer links in the center */
+    .footer-links {
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* this sets a padding for each footer link */
+    .footer-item {
+        padding: 10px;
+    }
+}
 
 
 
@@ -385,19 +498,16 @@
 /* below are the global stylings for my hero buttons, contact form, and copyright tag on this page */
 
 /* this gives the entire nav section a blue background color */
-.navBar {
-    background-color: #00168C;
-}
-
-.navRow a,
-#wesbiteLogo {
-    text-decoration: none;
+.navBar,
+.navRow a {
+    background-color: #526cff;
     color: white;
+    text-decoration: none;
     font-family: "Antipasto-Regular-trial", sans-serif;
 }
 
 .hero-section {
-    background-color: #00168C;
+    background-image: linear-gradient(#526cff, blue);
     color: white;
 }
 
