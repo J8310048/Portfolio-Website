@@ -1,3 +1,5 @@
+@import url("./antipasto-font.css");
+
 * {
     margin: 0;
 }
@@ -8,10 +10,21 @@
 
     /* NAVIGATION MENU CODE START */
 
-    /* this gives the entire nav section a blue background color with white text */
-    .navBar {
-        background-color: #00168C;
-        color: white;
+    .navBar,
+    .navRow a {
+        background-color: #526cff;
+    }
+
+    /* this hides the nav bar links so when the onclick attribute is triggered when clicking the hamburger menu, the links will be appear */
+    .navLinks {
+        display: none;
+    }
+
+    /* when a nav link is pressed, text color will turn black with a white background */
+    .navLinks a:active {
+        text-decoration: none;
+        color: black;
+        background-color: white;
     }
 
     /* this puts the logo and hamburger menu in a row */
@@ -36,20 +49,55 @@
         border-radius: 10px;
     }
 
-    /* this hides the nav bar links so when the onclick attribute is triggered when clicking the hamburger menu, the links will be appear */
-    .navLinks {
-        display: none;
+    .navLinks,
+    .navLinks a {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        font-family: "Anitpasto-DemiBold-trial", sans-serif;
     }
 
-    /* this toggles the hamburger menu to show the navigation links for mobile and tablet */
+    /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and tablet screens*/
     .show {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         list-style-type: none;
+        font-size: 20px;
+        row-gap: 10px;
+        padding: 5% 0;
     }
 
     /* NAVIGATION MENU CODE END */
+
+    .projectItem {
+        font-family: "Anitpasto-Light-trial", sans-serif;
+    }
+
+    /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
+    footer {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 20px;
+    }
+
+    /* this sets an image size for the github and linkedin icons */
+    .footer-logo {
+        width: 15%;
+        height: 75%;
+    }
+
+    /* this aligns all the footer links in the center */
+    .footer-links {
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* this sets a padding for each footer link */
+    .footer-item {
+        padding: 10px;
+    }
 }
 
 
@@ -61,10 +109,6 @@
     /* NAVIGATION MENU CODE START */
 
     /* this gives the entire nav section a blue background color with white text */
-    .navBar {
-        background-color: #00168C;
-        color: white;
-    }
 
     /* this puts the logo and hamburger menu in a row */
     .navRow {
@@ -81,6 +125,18 @@
         gap: 5px;
     }
 
+    .navBar,
+    .navRow a {
+        background-color: #526cff;
+    }
+
+    /* when a nav link is pressed, text color will turn black with a white background */
+    .navLinks a:active {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+    }
+
     /* this gives each line in the hamburger menu a color, height, and width */
     #menuLine {
         background-color: white;
@@ -94,22 +150,117 @@
         display: none;
     }
 
-    /* this toggles the hamburger menu to show the navigation links for mobile and tablet */
+    /* when a nav link is pressed, text color will turn black with a white background */
+    .navLinks,
+    .navLinks a {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        font-family: "Anitpasto-DemiBold-trial", sans-serif;
+        font-size: 30px;
+    }
+
+    /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and tablet screens*/
     .show {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         list-style-type: none;
+        font-size: 20px;
+        row-gap: 10px;
+        padding: 5% 0;
     }
 
     /* NAVIGATION MENU CODE END */
+
+    .projectItem {
+        font-family: "Anitpasto-Light-trial", sans-serif;
+    }
+
+    /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
+    footer {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 20px;
+    }
+
+    /* this aligns all the footer links in the center */
+    .footer-links {
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* this sets a padding for each footer link */
+    .footer-item {
+        padding: 10px;
+    }
 }
 
+@media only screen and (min-width: 769px) {
+    #websiteLogo {
+        font-size: 35px;
+    }
+
+    /* NAVIGATION MENU CODE START */
+    .navBar,
+    .navRow a {
+        background-color: #526cff;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navLinks a {
+        color: white;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    /* NAVIGATION MENU CODE END */
+
+    .projectItem {
+        font-family: "Anitpasto-Light-trial", sans-serif;
+    }
+
+    /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
+    footer {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 20px;
+    }
+
+    /* this aligns all the footer links in the center */
+    .footer-links {
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* this sets a padding for each footer link */
+    .footer-item {
+        padding: 10px;
+    }
+}
+
+/* GLOBAL STYLINGS BELOW */
 
 .navLinks a,
 .navRow a {
     text-decoration: none;
-    color: white;
+    font-family: "Antipasto-Regular-trial", sans-serif;
 }
 
 /* when a nav link is pressed, text color will turn black with a white background */
@@ -119,15 +270,16 @@
     background-color: white;
 }
 
+#websiteLogo a {
+    color: white;
+    text-decoration: none;
+}
+
 .projectSection {
     display: flex;
     flex-direction: row;
     column-gap: 40px;
-}
-
-.projectSection img {
-    height: 35vh;
-    width: 20vh;
+    margin: auto
 }
 
 
@@ -136,4 +288,5 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    font-family: sans-serif;
 }

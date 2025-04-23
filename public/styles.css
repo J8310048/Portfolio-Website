@@ -10,6 +10,11 @@
 
     /* NAVIGATION MENU CODE START */
 
+    .navBar {
+        background-color: #526cff;
+    }
+
+
     /* this puts the logo and hamburger menu in a row */
     .navRow {
         display: flex;
@@ -38,7 +43,6 @@
         display: none;
     }
 
-    /* when a nav link is pressed, text color will turn black with a white background */
     .navLinks,
     .navLinks a {
         text-decoration: none;
@@ -47,7 +51,7 @@
         font-family: "Anitpasto-DemiBold-trial", sans-serif;
     }
 
-    /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and tablet screens*/
+    /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and smaller tablet screens*/
     .show {
         display: flex;
         flex-direction: column;
@@ -63,6 +67,7 @@
 
     /* this aligns all the text in the hero section */
     .hero-section {
+        background-color: #526cff;
         text-align: center;
     }
 
@@ -197,6 +202,15 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+    }
+
+    .navBar,
+    .navRow a {
+        background-color: #526cff;
+    }
+
+    .hero-section {
+        background-image: linear-gradient(#526cff, blue);
     }
 
     /* this gives each line in the hamburger menu a color, height, and width */
@@ -348,6 +362,15 @@
         font-size: 35px;
     }
 
+    .navBar,
+    .navRow a {
+        background-color: #526cff;
+    }
+
+    .hero-section {
+        background-image: linear-gradient(#526cff, blue);
+    }
+
     .navBar {
         display: flex;
         flex-direction: row;
@@ -367,7 +390,6 @@
         color: white;
         text-decoration: none;
         list-style: none;
-
     }
 
     .hero-section {
@@ -497,17 +519,16 @@
 
 /* below are the global stylings for my hero buttons, contact form, and copyright tag on this page */
 
-/* this gives the entire nav section a blue background color */
+
+
 .navBar,
 .navRow a {
-    background-color: #526cff;
     color: white;
     text-decoration: none;
     font-family: "Antipasto-Regular-trial", sans-serif;
 }
 
 .hero-section {
-    background-image: linear-gradient(#526cff, blue);
     color: white;
 }
 

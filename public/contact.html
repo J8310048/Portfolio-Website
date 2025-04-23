@@ -16,9 +16,9 @@
 
             <nav class="navBar">
 
-                <div class="navRow">
+                <div class="navRow" id="websiteLogo">
                     <a href="index.html">
-                        <h1>JBI</h1>
+                        <h1>JBI Solutions</h1>
                     </a>
 
                     <div class="hamburgerMenu">
@@ -46,12 +46,12 @@
         </header>
 
         <main>
-            <form action="#" class="contact-form">
+            <form action="/contact" class="contact-form" method="POST" id="contactForm">
                 <label for="fullName">Name:</label>
                 <input type="text" id="fullName" name="fullName">
                 <label for="email">Email:</label>
                 <input type="text" id="email" name="email">
-                <label for="message">Comment:</label>
+                <label for="message" id="message">Comment:</label>
                 <textarea name="message" rows="10" cols="30"></textarea>
                 <input type="submit" value="Submit" id="submit">
             </form>
@@ -73,7 +73,7 @@
 
 
         </footer>
-        <script src="contact.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

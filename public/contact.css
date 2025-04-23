@@ -1,3 +1,5 @@
+@import url("./antipasto-font.css");
+
 * {
     margin: 0;
 }
@@ -10,15 +12,22 @@
 
     /* this gives the entire nav section a blue background color with white text */
     .navBar {
-        background-color: #00168C;
+        background-color: #526cff;
         color: white;
+        font-family: "Antipasto-Regular-trial", sans-serif;
     }
+
 
     /* this puts the logo and hamburger menu in a row */
     .navRow {
         display: flex;
         justify-content: space-between;
         padding: 10% 5%;
+    }
+
+    .navRow a {
+        text-decoration: none;
+        color: white;
     }
 
     /* this spaces out the three lines in the hamburger menu and organizes them into a column */
@@ -41,12 +50,23 @@
         display: none;
     }
 
-    /* this toggles the hamburger menu to show the navigation links for mobile and tablet */
+    .navLinks,
+    .navLinks a {
+        text-decoration: none;
+        color: white;
+        background-color: #526cff;
+        font-family: "Anitpasto-DemiBold-trial", sans-serif;
+    }
+
+    /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and smaller tablet screens*/
     .show {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         list-style-type: none;
+        font-size: 20px;
+        row-gap: 10px;
+        padding: 5% 0;
     }
 
     /* NAVIGATION MENU CODE END */
@@ -57,14 +77,15 @@
     footer {
         display: grid;
         grid-auto-flow: row;
-        gap: 60px;
+        gap: 20px;
+        margin-top: 30%;
     }
 
     /* this sets a margin for my contact form */
     .contact-form {
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 15%;
+        margin-top: 30%;
         gap: 10px;
     }
 
@@ -76,11 +97,6 @@
         margin: 5% 35%;
     }
 
-    /* this sets an image size for the github and linkedin icons */
-    .footer-logo {
-        width: 15%;
-        height: 80%;
-    }
 
     /* this aligns all the footer links in the center */
     .footer-links {
@@ -103,10 +119,12 @@
 
     /* NAVIGATION MENU CODE START */
 
+
     /* this gives the entire nav section a blue background color with white text */
     .navBar {
-        background-color: #00168C;
+        background-color: #526cff;
         color: white;
+        font-family: "Antipasto-Regular-trial", sans-serif;
     }
 
     /* this puts the logo and hamburger menu in a row */
@@ -115,6 +133,18 @@
         justify-content: space-between;
         padding: 10%;
         margin: auto;
+        text-decoration: none;
+        color: white;
+    }
+
+    .navRow a,
+    .navLinks a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .navLinks a {
+        font-size: 30px;
     }
 
     /* this spaces out the three lines in the hamburger menu and organizes them into a column */
@@ -137,24 +167,27 @@
         display: none;
     }
 
+
+    /* NAVIGATION MENU CODE END */
+
     /* this toggles the hamburger menu to show the navigation links for mobile and tablet */
+    /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and tablet screens*/
     .show {
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         list-style-type: none;
+        font-size: 20px;
+        row-gap: 10px;
+        padding: 5% 0;
     }
-
-    /* NAVIGATION MENU CODE END */
-}
-
-@media only screen and (min-width: 433px) {
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
     footer {
         display: grid;
         grid-auto-flow: row;
-        gap: 100px;
+        gap: 20px;
+        margin-top: 20%;
     }
 
     /* this sets a margin for my contact form */
@@ -173,10 +206,84 @@
         margin: 5% 35%;
     }
 
-    /* this sets an image size for the github and linkedin icons */
-    .footer-logo {
-        width: 10%;
-        height: 80%;
+
+
+    /* this aligns all the footer links in the center */
+    .footer-links {
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* this sets a padding for each footer link */
+    .footer-item {
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #websiteLogo a {
+        font-size: 35px;
+        font-family: "Anitpasto-Bold-trial", sans-serif;
+        text-decoration: none;
+        color: white;
+    }
+
+    /* NAVIGATION MENU CODE START */
+
+    .navBar,
+    .navRow a {
+        background-color: #526cff;
+        font-family: "Anitpasto-Medium-trial", sans-serif;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+    }
+
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navLinks a {
+        color: white;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    /* NAVIGATION MENU CODE END */
+
+
+    /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
+    footer {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 20px;
+        margin-top: 10%;
+    }
+
+    /* this sets a margin for my contact form */
+    .contact-form {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 15%;
+        gap: 20px;
+    }
+
+    /* this is for the submit button at the bottom of the page */
+    #submit {
+        border-radius: 20px;
+        padding: 10px 15px;
+        border: none;
+        margin: 5% 35%;
     }
 
     /* this aligns all the footer links in the center */
@@ -193,12 +300,6 @@
 }
 
 
-.navLinks a,
-.navRow a {
-    text-decoration: none;
-    color: white;
-}
-
 /* when a nav link is pressed, text color will turn black with a white background */
 .navLinks a:active {
     text-decoration: none;
@@ -209,6 +310,7 @@
 .contact-form {
     display: flex;
     flex-direction: column;
+    font-family: "Anitpasto-DemiBold-trial", sans-serif;
 }
 
 .legal-links {
@@ -216,4 +318,5 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    font-family: sans-serif;
 }
