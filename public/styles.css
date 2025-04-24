@@ -7,11 +7,15 @@
 /* Below are the breakpoints for smartphone screens*/
 
 @media only screen and (min-width: 320px) and (max-width: 432px) {
+    #websiteLogo {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
+    }
 
     /* NAVIGATION MENU CODE START */
 
     .navBar {
         background-color: #526cff;
+
     }
 
 
@@ -20,6 +24,7 @@
         display: flex;
         justify-content: space-between;
         padding: 10% 5%;
+        align-items: anchor-center;
     }
 
     /* this spaces out the three lines in the hamburger menu and organizes them into a column */
@@ -27,13 +32,14 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+
     }
 
     /* this gives each line in the hamburger menu a color, height, and width */
     #menuLine {
         background-color: white;
-        width: 40px;
-        height: 5px;
+        width: 30px;
+        height: 3px;
         border-radius: 10px;
     }
 
@@ -46,8 +52,8 @@
     .navLinks,
     .navLinks a {
         text-decoration: none;
-        color: black;
-        background-color: white;
+        color: white;
+        background-color: #526cff;
         font-family: "Anitpasto-DemiBold-trial", sans-serif;
     }
 
@@ -124,16 +130,6 @@
         width: 15vh;
         height: 15vh;
         padding: 5%;
-    }
-
-    .projectItem {
-        font-family: "Anitpasto-Light-trial", sans-serif;
-    }
-
-    #previousBtn,
-    #nextBtn {
-        width: 10px;
-        height: 10px;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -310,10 +306,6 @@
         padding: 5%;
     }
 
-    .projectItem {
-        font-family: "Anitpasto-Light-trial", sans-serif;
-    }
-
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
     footer {
         display: grid;
@@ -473,10 +465,6 @@
         }
     }
 
-    .projectItem {
-        font-family: "Anitpasto-Light-trial", sans-serif;
-    }
-
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
     footer {
         display: grid;
@@ -558,23 +546,21 @@
     font-family: "Anitpasto-ExtraBold-trial", sans-serif;
 }
 
-.projectSection {
-    display: flex;
-    flex-direction: column;
-    ROW-gap: 40px;
-    margin: auto
+.class slide {
+    width: 10%;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    font-family: "Anitpasto-DemiBold-trial", sans-serif;
+    font-family: sans-serif;
 }
 
 .legal-links {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 10px;
     font-family: sans-serif;
 }
