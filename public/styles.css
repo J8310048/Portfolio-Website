@@ -127,8 +127,7 @@
 
     /* this sets the padding for all the logos in the tech stack and design tools section */
     .logos img {
-        width: 15vh;
-        height: 15vh;
+        width: 35%;
         padding: 5%;
     }
 
@@ -505,18 +504,70 @@
     }
 }
 
+@media (min-width: 320px) and (max-width: 425px) {
+    .carousel-caption {
+        display: block !important;
+        background-color: rgba(0, 0, 0, 0.6);
+        /* Optional: makes text more readable */
+        padding: 10px;
+        border-radius: 10px;
 
+    }
 
+    .carousel-item img {
+        width: 50%;
+    }
+
+    .carousel-caption h2 {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 767.98px) {
+
+    .carousel-caption {
+        display: block !important;
+        background-color: rgba(0, 0, 0, 0.6);
+        /* Optional: makes text more readable */
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .carousel-item img {
+        width: 50%;
+    }
+
+    .carousel-caption h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .carousel-caption h2 {
+        font-size: 20px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        /* Optional: makes text more readable */
+    }
+}
 
 /* below are the global stylings for my hero buttons, contact form, and copyright tag on this page */
 
-
+/* sets the background color to a darker shade of white. Helps to see carousel buttons  */
+main,
+footer {
+    background-color: rgb(203, 202, 202);
+}
 
 .navBar,
 .navRow a {
     color: white;
     text-decoration: none;
-    font-family: "Antipasto-Regular-trial", sans-serif;
+    font-family: "Antipasto-Regular-trial",
+        sans-serif;
 }
 
 .hero-section {
