@@ -105,6 +105,9 @@
 /* Below are the breakpoints for the navigation menu on tablet screens */
 
 @media only screen and (min-width: 433px) and (max-width: 768px) {
+    #websiteLogo {
+        font-size: 25px;
+    }
 
     /* NAVIGATION MENU CODE START */
 
@@ -114,7 +117,7 @@
     .navRow {
         display: flex;
         justify-content: space-between;
-        padding: 10%;
+        padding: 4% 10%;
         margin: auto;
     }
 
@@ -154,10 +157,10 @@
     .navLinks,
     .navLinks a {
         text-decoration: none;
-        color: black;
-        background-color: white;
+        color: white;
+        background-color: #526cff;
         font-family: "Anitpasto-DemiBold-trial", sans-serif;
-        font-size: 30px;
+        font-size: 20px;
     }
 
     /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and tablet screens*/
@@ -213,9 +216,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding-top: 4%;
-        padding-left: 10%;
-        padding-right: 10%;
+        padding: 4% 10%;
     }
 
     .navLinks {
@@ -277,7 +278,8 @@
 
 .projectSection {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
     column-gap: 40px;
     margin: auto
 }

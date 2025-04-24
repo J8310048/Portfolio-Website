@@ -184,6 +184,9 @@
 /* Below are the breakpoints from mobile to tablet for the navigation menu*/
 
 @media only screen and (min-width: 433px) and (max-width: 768px) {
+    #websiteLogo {
+        font-size: 25px;
+    }
 
     /* NAVIGATION MENU CODE START */
 
@@ -233,7 +236,7 @@
         color: black;
         background-color: white;
         font-family: "Anitpasto-DemiBold-trial", sans-serif;
-        font-size: 30px;
+        font-size: 20px;
     }
 
     /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and tablet screens*/
@@ -433,7 +436,7 @@
         grid-auto-flow: row;
         text-align: center;
         margin-top: 10%;
-        row-gap: 50px;
+        row-gap: 150px;
     }
 
     .midSection {
@@ -485,7 +488,7 @@
     .contact-form {
         margin-left: 20%;
         margin-right: 20%;
-        margin-top: 15%;
+        margin-top: 5%;
         gap: 20px;
     }
 
@@ -557,8 +560,8 @@
 
 .projectSection {
     display: flex;
-    flex-direction: row;
-    column-gap: 40px;
+    flex-direction: column;
+    ROW-gap: 40px;
     margin: auto
 }
 

@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
     res.send("The server is awaiting your response")
 })
 
+
 app.post("/contact", async (req, res) => {
 
     const { fullName, email, message } = req.body

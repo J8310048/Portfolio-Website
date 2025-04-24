@@ -116,6 +116,9 @@
 /* Below are the breakpoints for the navigation menu on tablet screens */
 
 @media only screen and (min-width: 433px) and (max-width: 768px) {
+    #websiteLogo {
+        font-size: 25px;
+    }
 
     /* NAVIGATION MENU CODE START */
 
@@ -131,7 +134,7 @@
     .navRow {
         display: flex;
         justify-content: space-between;
-        padding: 10%;
+        padding: 4% 10%;
         margin: auto;
         text-decoration: none;
         color: white;
@@ -144,7 +147,7 @@
     }
 
     .navLinks a {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     /* this spaces out the three lines in the hamburger menu and organizes them into a column */
