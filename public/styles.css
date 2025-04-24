@@ -505,52 +505,15 @@
 }
 
 @media (min-width: 320px) and (max-width: 425px) {
-    .carousel-caption {
-        display: block !important;
-        background-color: rgba(0, 0, 0, 0.6);
-        /* Optional: makes text more readable */
-        padding: 10px;
-        border-radius: 10px;
 
-    }
 
     .carousel-item img {
         width: 50%;
     }
 
-    .carousel-caption h2 {
-        font-size: 15px;
+    .caption-wrapper h2 {
+        font-size: 25px;
         text-align: center;
-    }
-}
-
-@media (min-width: 425px) and (max-width: 767.98px) {
-
-    .carousel-caption {
-        display: block !important;
-        background-color: rgba(0, 0, 0, 0.6);
-        /* Optional: makes text more readable */
-        padding: 10px;
-        border-radius: 10px;
-    }
-
-    .carousel-item img {
-        width: 50%;
-    }
-
-    .carousel-caption h2 {
-        font-size: 20px;
-        text-align: center;
-    }
-}
-
-@media (min-width: 768px) {
-
-    .carousel-caption h2 {
-        font-size: 20px;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.6);
-        /* Optional: makes text more readable */
     }
 }
 
