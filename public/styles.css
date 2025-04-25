@@ -15,7 +15,6 @@
 
     .navBar {
         background-color: #526cff;
-
     }
 
 
@@ -528,6 +527,18 @@
 }
 
 @media (min-width: 1024px) {
+    #portfolioTitle {
+        margin-bottom: 10%;
+    }
+
+    .caption-wrapper {
+        margin: auto;
+    }
+
+    .mx-auto {
+        margin-right: 15% !important;
+    }
+
     .carousel-title {
         font-size: 2rem;
     }

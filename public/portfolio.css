@@ -52,8 +52,8 @@
     .navLinks,
     .navLinks a {
         text-decoration: none;
-        color: black;
-        background-color: white;
+        color: white;
+        background-color: #526cff;
         font-family: "Anitpasto-DemiBold-trial", sans-serif;
     }
 
@@ -70,8 +70,16 @@
 
     /* NAVIGATION MENU CODE END */
 
-    .projectItem {
+    #websiteCarousel,
+    #appCarousel {
         font-family: "Anitpasto-Light-trial", sans-serif;
+        text-align: center;
+        padding: 20% 0;
+    }
+
+    #websiteCarousel h1,
+    #appCarousel h1 {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -79,12 +87,6 @@
         display: grid;
         grid-auto-flow: row;
         gap: 20px;
-    }
-
-    /* this sets an image size for the github and linkedin icons */
-    .footer-logo {
-        width: 15%;
-        height: 75%;
     }
 
     /* this aligns all the footer links in the center */
@@ -176,8 +178,16 @@
 
     /* NAVIGATION MENU CODE END */
 
-    .projectItem {
+    #websiteCarousel,
+    #appCarousel {
         font-family: "Anitpasto-Light-trial", sans-serif;
+        text-align: center;
+        padding: 20% 0;
+    }
+
+    #websiteCarousel h1,
+    #appCarousel h1 {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -232,8 +242,16 @@
 
     /* NAVIGATION MENU CODE END */
 
-    .projectItem {
+    #websiteCarousel,
+    #appCarousel {
         font-family: "Anitpasto-Light-trial", sans-serif;
+        text-align: center;
+        padding-top: 10%;
+    }
+
+    #websiteCarousel h1,
+    #appCarousel h1 {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -254,6 +272,62 @@
     .footer-item {
         padding: 10px;
     }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+
+
+    .carousel-item img {
+        width: 50%;
+    }
+
+    .caption-wrapper h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .carousel-desc {
+        display: none;
+    }
+}
+
+.caption-wrapper {
+    max-width: 500px;
+}
+
+@media (min-width: 1024px) {
+    #portfolioTitle {
+        margin-bottom: 10%;
+    }
+
+    .caption-wrapper {
+        margin: auto;
+    }
+
+    .mx-auto {
+        margin-right: 15% !important;
+    }
+
+    .carousel-title {
+        font-size: 2rem;
+    }
+
+    .carousel-desc {
+        font-size: 1rem;
+        opacity: 0.9;
+        display: block;
+    }
+}
+
+
+/* below are the global stylings for my hero buttons, contact form, and copyright tag on this page */
+
+/* sets the background color to a darker shade of white. Helps to see carousel buttons  */
+main,
+footer {
+    background-color: rgb(203, 202, 202);
 }
 
 /* GLOBAL STYLINGS BELOW */
