@@ -234,32 +234,43 @@
 
     /* NAVIGATION MENU CODE START */
 
-    .navBar,
-    .navRow a {
-        background-color: #526cff;
-        font-family: "Anitpasto-Medium-trial", sans-serif;
-    }
-
     .navBar {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-        padding-top: 5%;
-        padding-left: 10%;
-        padding-right: 10%;
-        padding-bottom: 5%;
+        position: sticky;
+        justify-content: space-between;
+        top: 0;
+        z-index: 1000;
+        background-color: #526cff;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        /* Optional: soft depth */
     }
 
     .navLinks {
+        list-style-type: none;
         display: flex;
         flex-direction: row;
     }
 
-    .navLinks a {
-        color: white;
+    .navLinks li a {
         text-decoration: none;
-        list-style: none;
+        color: white;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+    }
+
+
+    .navLinks li a:hover {
+        border-bottom: 2px solid black;
+    }
+
+    .navLinks li a:active,
+    .navLinks li a.active {
+        font-weight: bold;
+        color: #00E6AF;
+        border-bottom: 2px solid #00E6AF;
     }
 
     /* NAVIGATION MENU CODE END */
