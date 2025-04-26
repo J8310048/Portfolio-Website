@@ -542,14 +542,6 @@
         margin-bottom: 10%;
     }
 
-    .caption-wrapper {
-        margin: auto;
-    }
-
-    .mx-auto {
-        margin-right: 15% !important;
-    }
-
     .carousel-desc {
         font-size: 1rem;
         opacity: 0.9;
@@ -563,16 +555,6 @@
 
     .caption-wrapper {
         margin-left: 10%;
-    }
-
-    .caption-wrapper:hover {
-        color: white;
-    }
-
-    .caption-wrapper:active {
-        color: black;
-        background-color: white;
-        border-radius: 5px;
     }
 }
 
