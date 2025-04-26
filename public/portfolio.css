@@ -347,8 +347,7 @@ footer {
 
 /* GLOBAL STYLINGS BELOW */
 
-.navLinks a,
-.navRow a {
+.navLinks a {
     text-decoration: none;
     font-family: "Antipasto-Regular-trial", sans-serif;
 }
@@ -361,16 +360,12 @@ footer {
 #websiteLogo a {
     color: white;
     text-decoration: none;
+    font-family: "Anitpasto-Bold-trial", sans-serif;
 }
 
-.projectSection {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    column-gap: 40px;
-    margin: auto
+.footer-links a {
+    text-decoration: none;
 }
-
 
 .legal-links {
     display: flex;

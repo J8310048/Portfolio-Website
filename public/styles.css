@@ -7,9 +7,7 @@
 /* Below are the breakpoints for smartphone screens*/
 
 @media only screen and (min-width: 320px) and (max-width: 432px) {
-    #websiteLogo {
-        font-family: "Anitpasto-Bold-trial", sans-serif;
-    }
+
 
     /* NAVIGATION MENU CODE START */
 
@@ -552,14 +550,29 @@
         margin-right: 15% !important;
     }
 
-    .carousel-title {
-        font-size: 2rem;
-    }
-
     .carousel-desc {
         font-size: 1rem;
         opacity: 0.9;
         display: block;
+    }
+
+    .carousel-item a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .caption-wrapper {
+        margin-left: 10%;
+    }
+
+    .caption-wrapper:hover {
+        color: white;
+    }
+
+    .caption-wrapper:active {
+        color: black;
+        background-color: white;
+        border-radius: 5px;
     }
 }
 
@@ -572,10 +585,15 @@ footer {
     background-color: rgb(203, 202, 202);
 }
 
+#websiteLogo a {
+    font-family: "Anitpasto-Bold-trial", sans-serif;
+}
+
 /* when a nav link is clicked, it will have a white background */
 .navLinks a:active {
     background-color: white;
 }
+
 
 .navBar,
 .navRow a {
@@ -597,6 +615,7 @@ footer {
     border-radius: 20px;
     padding: 10px 15px;
     border: none;
+    cursor: pointer;
 }
 
 #contact-button {
@@ -632,11 +651,22 @@ footer {
 .contact-form {
     display: flex;
     flex-direction: column;
-    font-family: sans-serif;
 }
 
-#submit:hover {
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: "Anitpasto-Medium-trial", sans-serif;
+}
+
+#submit {
     cursor: pointer;
+}
+
+.footer-links a {
+    text-decoration: none;
 }
 
 .legal-links {

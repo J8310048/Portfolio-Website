@@ -11,66 +11,71 @@
 </head>
 
 <body>
+
+    <!-- this header will contain my navigation bar, logo, and hamburger menu for mobile screens -->
+
     <header>
-        <!-- this header will contain my navigation bar, logo, and hamburger menu for mobile screens -->
 
-        <header>
+        <nav class="navBar">
 
-            <nav class="navBar">
+            <div class="navRow" id="websiteLogo">
+                <a href="index.html">
+                    <h1>JBI Solutions</h1>
+                </a>
 
-                <div class="navRow" id="websiteLogo">
-                    <a href="index.html">
-                        <h1>JBI Solutions</h1>
-                    </a>
-
-                    <div class="hamburgerMenu">
-                        <div id="menuLine"></div>
-                        <div id="menuLine"></div>
-                        <div id="menuLine"></div>
-                    </div>
+                <div class="hamburgerMenu">
+                    <div id="menuLine"></div>
+                    <div id="menuLine"></div>
+                    <div id="menuLine"></div>
                 </div>
-
-
-                <ul class="navLinks ">
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="portfolio.html">portfolio</a></li>
-                    <li><a class="active" href="contact.html">contact</a></li>
-                </ul>
-
-            </nav>
-
-        </header>
-
-        <main>
-            <form action="/contact" class="contact-form" method="POST" id="contactForm">
-                <label for="fullName">Name:</label>
-                <input type="text" id="fullName" name="fullName">
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email">
-                <label for="message" id="message">Comment:</label>
-                <textarea name="message" rows="10" cols="30"></textarea>
-                <input type="submit" value="Submit" id="submit">
-            </form>
-        </main>
-
-        <footer>
-
-
-            <div class="footer-links">
-                <img src="Logos\GitHub.png" class="footer-logo footer-item">
-                <img src="Logos\LinkedIn.png" class="footer-logo footer-item">
-            </div>
-
-            <div class="legal-links">
-                <p>Privacy Page</p>
-                <p>Terms and Conditions</p>
-                <p id="copyright">&copy; 2024 JBI All rights reserved</p>
             </div>
 
 
-        </footer>
-        <script src="script.js"></script>
-        <script src="/server.js"></script>
+            <ul class="navLinks ">
+                <li><a href="index.html">home</a></li>
+                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a class="active" href="contact.html">contact</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <form action="/contact" class="contact-form" method="POST" id="contactForm">
+            <label for="fullName"></label>
+            <input type="text" id="fullName" name="fullName" placeholder="Name">
+            <label for="email"></label>
+            <input type="text" id="email" name="email" placeholder="Email">
+            <label for="message" id="message"></label>
+            <textarea name="message" rows="10" cols="30" placeholder="Leave a message!"></textarea>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </main>
+
+    <footer>
+
+
+        <div class="footer-links">
+            <a href="https://github.com/J8310048">
+                <img src="Logos\GitHub.png" class="footer-logo footer-item" alt="Github logo in black color">
+            </a>
+
+            <a href="https://www.linkedin.com/in/joshuab-i/">
+                <img src="Logos\LinkedIn.png" class="footer-logo footer-item" alt="LinkedIn Logo in black color">
+            </a>
+        </div>
+
+        <div class="legal-links">
+            <p>Privacy Page</p>
+            <p>Terms and Conditions</p>
+            <p id="copyright">&copy; 2024 JBI All rights reserved</p>
+        </div>
+
+
+    </footer>
+    <script src="script.js"></script>
+    <script src="/server.js"></script>
 </body>
 
 </html>

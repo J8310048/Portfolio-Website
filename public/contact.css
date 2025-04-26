@@ -313,8 +313,16 @@
     }
 }
 
+body {
+    background-color: rgb(203, 202, 202);
+}
 
 /* when a nav link is clicked, it will have a white background */
+.navLinks a {
+    text-decoration: none;
+    font-family: "Antipasto-Regular-trial", sans-serif;
+}
+
 .navLinks a:active {
     background-color: white;
 }
@@ -322,7 +330,22 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    font-family: "Anitpasto-DemiBold-trial", sans-serif;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: "Anitpasto-Medium-trial", sans-serif;
+}
+
+#submit {
+    cursor: pointer;
+}
+
+.footer-links a {
+    text-decoration: none;
 }
 
 .legal-links {

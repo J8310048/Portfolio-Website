@@ -70,13 +70,21 @@
 
                 <div class="hero-buttons">
 
-                    <button class="redirect-buttons" id="contact-button">
-                        <a href="contact.html">Contact me</a>
-                    </button>
 
-                    <button class="redirect-buttons" id="portfolio-button">
-                        <a href="portfolio.html">Portfolio</a>
-                    </button>
+                    <a href="contact.html">
+                        <button class="redirect-buttons" id="contact-button">
+                            Contact me
+                        </button>
+                    </a>
+
+
+
+                    <a href="portfolio.html">
+                        <button class="redirect-buttons" id="portfolio-button">
+                            Portfolio
+                        </button>
+                    </a>
+
 
                 </div>
             </section>
@@ -129,8 +137,8 @@
 
 
                     <div class="carousel-item active">
-                        <a href="https://coastal-cleanup-2.onrender.com/home/">
 
+                        <a href="https://coastal-cleanup-2.onrender.com/home/" target="_blank">
                             <div
                                 class="d-flex flex-column flex-lg-row-reverse align-items-center justify-content-center">
                                 <img class="d-block mx-auto img-fluid" src="Logos\Coastal Cleanup Mobile.png"
@@ -146,7 +154,7 @@
 
 
                     <div class="carousel-item">
-                        <a href="https://laserfocus-disc-and-co.onrender.com/">
+                        <a href="https://laserfocus-disc-and-co.onrender.com/" target="_blank">
 
                             <div
                                 class="d-flex flex-column flex-lg-row-reverse align-items-center justify-content-center">
@@ -163,7 +171,7 @@
 
 
                     <div class="carousel-item">
-                        <a href="https://dev-macon-peters.pantheonsite.io/">
+                        <a href="https://dev-macon-peters.pantheonsite.io/" target="_blank">
 
                             <div
                                 class="d-flex flex-column flex-lg-row-reverse align-items-center justify-content-center">
@@ -195,12 +203,12 @@
 
 
         <form action="/contact" class="contact-form" method="POST" id="contactForm">
-            <label for="fullName">Name:</label>
-            <input type="text" id="fullName" name="fullName">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email">
-            <label for="message" id="message">Comment:</label>
-            <textarea name="message" rows="10" cols="30"></textarea>
+            <label for="fullName"></label>
+            <input type="text" id="fullName" name="fullName" placeholder="Name">
+            <label for="email"></label>
+            <input type="text" id="email" name="email" placeholder="Email">
+            <label for="message" id="message"></label>
+            <textarea name="message" rows="10" cols="30" placeholder="Leave a message!"></textarea>
             <input type="submit" value="Submit" id="submit">
         </form>
     </main>
@@ -212,10 +220,19 @@
         <!-- this section has links to linkedin, github, and legal pages -->
         <section>
 
+
+
             <div class="footer-links">
-                <img src="Logos\GitHub.png" class="footer-logo footer-item" alt="Github logo in black color">
-                <img src="Logos\LinkedIn.png" class="footer-logo footer-item" alt="LinkedIn Logo in black color">
+                <a href="https://github.com/J8310048">
+                    <img src="Logos\GitHub.png" class="footer-logo footer-item" alt="Github logo in black color">
+                </a>
+
+                <a href="https://www.linkedin.com/in/joshuab-i/">
+                    <img src="Logos\LinkedIn.png" class="footer-logo footer-item" alt="LinkedIn Logo in black color">
+                </a>
             </div>
+
+
 
             <div class="legal-links">
                 <p>Privacy Page</p>
