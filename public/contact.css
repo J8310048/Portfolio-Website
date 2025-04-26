@@ -314,10 +314,8 @@
 }
 
 
-/* when a nav link is pressed, text color will turn black with a white background */
+/* when a nav link is clicked, it will have a white background */
 .navLinks a:active {
-    text-decoration: none;
-    color: black;
     background-color: white;
 }
 

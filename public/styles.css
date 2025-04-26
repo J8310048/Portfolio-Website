@@ -48,7 +48,6 @@
         display: none;
     }
 
-    .navLinks,
     .navLinks a {
         text-decoration: none;
         color: white;
@@ -573,12 +572,21 @@ footer {
     background-color: rgb(203, 202, 202);
 }
 
+/* when a nav link is clicked, it will have a white background */
+.navLinks a:active {
+    background-color: white;
+}
+
 .navBar,
 .navRow a {
     color: white;
     text-decoration: none;
     font-family: "Antipasto-Regular-trial",
         sans-serif;
+}
+
+.hero-buttons a {
+    text-decoration: none;
 }
 
 .hero-section {
@@ -595,6 +603,11 @@ footer {
     background-color: #00E6AF;
     font-family: "Anitpasto-DemiBold-trial", sans-serif;
     font-size: 16px;
+
+}
+
+#contact-button a {
+    color: black;
 }
 
 #portfolio-button {
@@ -602,6 +615,10 @@ footer {
     color: white;
     font-family: "Anitpasto-ExtraBold-trial", sans-serif;
     font-size: 16px;
+}
+
+#portfolio-button a {
+    color: white;
 }
 
 .skills-section {
@@ -616,6 +633,10 @@ footer {
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
+}
+
+#submit:hover {
+    cursor: pointer;
 }
 
 .legal-links {
