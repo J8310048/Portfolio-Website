@@ -210,6 +210,31 @@
     }
 }
 
+@media (min-width: 320px) and (max-width: 425px) {
+
+
+    .carousel-item img {
+        width: 50%;
+    }
+
+    .caption-wrapper h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 425px) {
+    .img-fluid {
+        width: 50%;
+    }
+}
+
+@media (min-width: 609px) {
+    .img-fluid {
+        width: 35%;
+    }
+}
+
 @media only screen and (min-width: 769px) {
     #websiteLogo {
         font-size: 35px;
@@ -296,18 +321,6 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
-
-
-    .carousel-item img {
-        width: 50%;
-    }
-
-    .caption-wrapper h2 {
-        font-size: 25px;
-        text-align: center;
-    }
-}
 
 @media (max-width: 1023.98px) {
     .carousel-desc {
@@ -315,9 +328,7 @@
     }
 }
 
-.caption-wrapper {
-    max-width: 500px;
-}
+
 
 @media (min-width: 1024px) {
     #portfolioTitle {
@@ -334,6 +345,10 @@
         margin-right: 15% !important;
     }
 
+    .img-fluid {
+        width: 25%;
+    }
+
     .carousel-title {
         font-size: 2rem;
     }
@@ -343,18 +358,25 @@
         opacity: 0.9;
         display: block;
     }
+
 }
 
 
 /* below are the global stylings for my hero buttons, contact form, and copyright tag on this page */
 
 /* sets the background color to a darker shade of white. Helps to see carousel buttons  */
+
+
+/* GLOBAL STYLINGS BELOW */
+
 main,
 footer {
     background-color: rgb(203, 202, 202);
 }
 
-/* GLOBAL STYLINGS BELOW */
+.caption-wrapper {
+    max-width: 500px;
+}
 
 #websiteLogo a {
     color: white;
@@ -375,6 +397,11 @@ footer {
 .carousel-item a {
     text-decoration: none;
     color: black;
+}
+
+.img-fluid {
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .footer-links a {

@@ -127,6 +127,8 @@
         padding: 5%;
     }
 
+
+
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
     footer {
         display: grid;
@@ -170,7 +172,29 @@
     }
 }
 
+@media (min-width: 320px) and (max-width: 425px) {
 
+
+    .carousel-item img {
+        width: 50%;
+    }
+
+    .caption-wrapper h2 {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 425px) {
+    .img-fluid {
+        width: 50%;
+    }
+}
+
+@media (min-width: 609px) {
+    .img-fluid {
+        width: 35%;
+    }
+}
 
 /* Below are the breakpoints from mobile to tablet for the navigation menu*/
 
@@ -518,17 +542,6 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
-
-
-    .carousel-item img {
-        width: 50%;
-    }
-
-    .caption-wrapper h2 {
-        font-size: 25px;
-    }
-}
 
 @media (max-width: 1023.98px) {
     .carousel-desc {
@@ -536,9 +549,6 @@
     }
 }
 
-.caption-wrapper {
-    max-width: 500px;
-}
 
 @media (min-width: 1024px) {
 
@@ -556,6 +566,10 @@
         margin-left: 10%;
         text-align: left !important;
         align-items: flex-start;
+    }
+
+    .img-fluid {
+        width: 25%;
     }
 }
 
@@ -629,7 +643,7 @@ footer {
 
 .caption-wrapper {
     font-family: "Anitpasto-ExtraBold-trial", sans-serif;
-    ;
+    max-width: 500px;
 }
 
 .carousel-desc {
@@ -643,6 +657,11 @@ footer {
 .carousel-item a {
     text-decoration: none;
     color: black;
+}
+
+.img-fluid {
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .contact-form {
