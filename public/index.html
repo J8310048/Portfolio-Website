@@ -19,7 +19,7 @@
 
             <div class="navRow" id="websiteLogo">
                 <a href="index.html">
-                    <h2>JBI Solutions</h2>
+                    <h1>JBI Solutions</h1>
                 </a>
 
                 <div class="hamburgerMenu">
@@ -280,26 +280,28 @@
                 </div>
             </div>
 
+
+            <form action="/contact" class="contact-form" method="POST" id="contactForm">
+                <h2>Let me know how I can help!</h2>
+
+                <label for="fullName"></label>
+                <input type="text" id="fullName" name="fullName" placeholder="Name">
+                <span class="error" id="nameError"></span>
+
+                <label for="email"></label>
+                <input type="text" id="email" name="email" placeholder="Email">
+                <span class="error" id="emailError"></span>
+
+                <label for="message"></label>
+                <textarea name="message" id="message" rows="10" cols="30" placeholder="Leave a message!"></textarea>
+                <span class="error" id="messageError"></span>
+
+
+                <input type="submit" value="Submit" id="submit">
+            </form>
         </article>
 
 
-        <form action="/contact" class="contact-form" method="POST" id="contactForm">
-
-            <label for="fullName"></label>
-            <input type="text" id="fullName" name="fullName" placeholder="Name">
-            <span class="error" id="nameError"></span>
-
-            <label for="email"></label>
-            <input type="text" id="email" name="email" placeholder="Email">
-            <span class="error" id="emailError"></span>
-
-            <label for="message"></label>
-            <textarea name="message" id="message" rows="10" cols="30" placeholder="Leave a message!"></textarea>
-            <span class="error" id="messageError"></span>
-
-
-            <input type="submit" value="Submit" id="submit">
-        </form>
     </main>
 
 
