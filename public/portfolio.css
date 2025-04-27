@@ -72,7 +72,7 @@
 
     #websiteCarousel,
     #appCarousel {
-        font-family: "Anitpasto-Light-trial", sans-serif;
+        font-family: "Anitpasto-Medium-trial", sans-serif;
         text-align: center;
         padding: 20% 0;
     }
@@ -80,6 +80,7 @@
     #websiteCarousel h1,
     #appCarousel h1 {
         font-family: "Anitpasto-Bold-trial", sans-serif;
+        margin-bottom: 10%;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -180,7 +181,7 @@
 
     #websiteCarousel,
     #appCarousel {
-        font-family: "Anitpasto-Light-trial", sans-serif;
+        font-family: "Anitpasto-Medium-trial", sans-serif;
         text-align: center;
         padding: 20% 0;
     }
@@ -188,6 +189,7 @@
     #websiteCarousel h1,
     #appCarousel h1 {
         font-family: "Anitpasto-Bold-trial", sans-serif;
+        margin-bottom: 10%;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -227,10 +229,18 @@
     .img-fluid {
         width: 50%;
     }
+
+    #motionPhoto {
+        width: 50%;
+    }
 }
 
 @media (min-width: 609px) {
     .img-fluid {
+        width: 35%;
+    }
+
+    #motionPhoto {
         width: 35%;
     }
 }
@@ -294,7 +304,6 @@
 
     .caption-wrapper {
         font-family: "Anitpasto-ExtraBold-trial", sans-serif;
-        ;
     }
 
     .carousel-desc {
@@ -374,10 +383,6 @@ footer {
     background-color: rgb(203, 202, 202);
 }
 
-.caption-wrapper {
-    max-width: 500px;
-}
-
 #websiteLogo a {
     color: white;
     text-decoration: none;
@@ -392,6 +397,10 @@ footer {
 /* when a nav link is clicked, it will have a white background */
 .navLinks a:active {
     background-color: white;
+}
+
+.caption-wrapper {
+    max-width: 500px;
 }
 
 .carousel-item a {

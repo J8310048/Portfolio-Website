@@ -613,6 +613,7 @@ footer {
     padding: 10px 15px;
     border: none;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 #contact-button {
