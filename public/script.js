@@ -12,96 +12,83 @@ hamburgerMenu.addEventListener("click", () => {
 
 
 
-// PROJECT CAROUSEL SLIDER CODE START
-const sliderItems = document.querySelectorAll(".projectItem")
-console.log(sliderItems)
 
 
-
-
-// below sets up how the slider will look like by default
-
-let currentIndex = 0;
-
-function showProject(current) {
-    sliderItems.forEach((item, index) => {
-        if (index === current) {
-            item.style.display = "block"; // this shows every project item that's equal the first index position in the array
-        } else {
-            item.style.display = "none"; // this hides every project item not equal the first index position in the array
-        }
-    });
-}
-
-showProject(currentIndex)
-
-
-
-// const prevBtn = document.querySelector(".previous")
-// console.log(prevBtn)
-// const nextBtn = document.querySelector(".next")
-// console.log(nextBtn)
-
-
-
-// // PREVIOUS BUTTON CODE START
-// prevBtn.addEventListener("click", () => {
-//     currentIndex = currentIndex - 1;
-//     if (currentIndex < 0) {
-//         currentIndex = sliderItems.length - 1 // this loops to the last project
-//     }
-//     console.log("This clicks!")
-//     showProject(currentIndex)
-// })
-// // PREVIOUS BUTTON CODE END
-
-
-
-// // NEXT BUTTON CODE START
-// nextBtn.addEventListener("click", () => {
-//     currentIndex = currentIndex + 1;
-//     if (currentIndex >= sliderItems.length) {
-//         currentIndex = 0 // this loops back to the first project
-//     }
-//     console.log("This clicks too!")
-//     showProject(currentIndex)
-// })
-// // NEXT BUTTON CODE END
-
-
-
-
-// PROJECT CAROUSEL SLIDER CODE END
-
-
-
-// CONTACT FORM SUBMISSION START
-const contactForm = document.getElementById("contactForm")
+// CONTACT FORM SUBMISSION WITH VALIDATION START
+const contactForm = document.getElementById("contactForm");
 
 contactForm.addEventListener("submit", (event) => {
-    event.preventDefault() //this stops the from reloading itself after clicking submit
+    event.preventDefault(); // Stop form from reloading
+
+    // Grab values
+    const fullNameInput = document.getElementById("fullName");
+    const emailInput = document.getElementById("email");
+    const messageInput = document.getElementById("message");
+
+    const name = fullNameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+
+    // Grab error elements
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const messageError = document.getElementById("messageError");
+
+    // Clear previous errors
+    nameError.textContent = "";
+    emailError.textContent = "";
+    messageError.textContent = "";
+
+    let isValid = true;
+
+    if (!name) {
+        nameError.textContent = "Name is required.";
+        isValid = false;
+    }
+
+    if (!email) {
+        emailError.textContent = "Email is required.";
+        isValid = false;
+    } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        emailError.textContent = "Enter a valid email address.";
+        isValid = false;
+    }
+
+    if (!message) {
+        messageError.textContent = "Message is required.";
+        isValid = false;
+    }
+
+    if (!isValid) {
+        return; // STOP if invalid
+    }
+
+    // Proceed with submission if valid
     const formData = new FormData(contactForm);
     const formCapture = new URLSearchParams(formData);
 
-    console.log("Full Name:", formData.get("fullName"));
-    console.log("Email:", formData.get("email"));
-    console.log("Message:", formData.get("message"));
+    console.log("Full Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
 
     fetch("https://portfolio-website-pogv.onrender.com/contact", {
         method: "POST",
         headers: {
-            "content-type": "application/x-www-form-urlencoded"
+            "Content-Type": "application/x-www-form-urlencoded"
         },
         body: formCapture.toString()
     })
         .then(res => res.text())
         .then(data => {
-            console.log("Here's your response from the server: ", data)
-            alert("Form submission successful!")
+            console.log("Here's your response from the server:", data);
+            alert("Form submission successful!");
+            contactForm.reset(); // Clear form after success
         })
-        .catch(err => console.error("Here's your fetch error: ", err))
-})
-// CONTACT FORM SUBMISSION END
+        .catch(err => console.error("Here's your fetch error:", err));
+});
+// CONTACT FORM SUBMISSION WITH VALIDATION END
+
+
 
 
 

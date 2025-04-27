@@ -356,6 +356,10 @@
         background-image: linear-gradient(#526cff, blue);
     }
 
+    #profilePic {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    }
+
     .navBar {
         display: flex;
         flex-direction: row;
@@ -523,7 +527,6 @@
 
     .caption-wrapper h2 {
         font-size: 25px;
-        text-align: center;
     }
 }
 
@@ -538,6 +541,7 @@
 }
 
 @media (min-width: 1024px) {
+
     #portfolioTitle {
         margin-bottom: 10%;
     }
@@ -548,13 +552,10 @@
         display: block;
     }
 
-    .carousel-item a {
-        text-decoration: none;
-        color: black;
-    }
-
     .caption-wrapper {
         margin-left: 10%;
+        text-align: left !important;
+        align-items: flex-start;
     }
 }
 
@@ -626,8 +627,22 @@ footer {
     font-family: "Anitpasto-ExtraBold-trial", sans-serif;
 }
 
+.caption-wrapper {
+    font-family: "Anitpasto-ExtraBold-trial", sans-serif;
+    ;
+}
+
+.carousel-desc {
+    font-family: "Anitpasto-Medium-trial", sans-serif;
+}
+
 .class slide {
     width: 10%;
+}
+
+.carousel-item a {
+    text-decoration: none;
+    color: black;
 }
 
 .contact-form {
@@ -635,13 +650,15 @@ footer {
     flex-direction: column;
 }
 
+
 .contact-form input,
 .contact-form textarea {
     border: none;
     border-radius: 10px;
     padding-left: 10px;
-    font-family: "Anitpasto-Medium-trial", sans-serif;
+    font-family: sans-serif;
 }
+
 
 #submit {
     cursor: pointer;
@@ -658,4 +675,11 @@ footer {
     text-align: center;
     gap: 10px;
     font-family: sans-serif;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    display: block;
 }

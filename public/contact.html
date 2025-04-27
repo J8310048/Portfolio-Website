@@ -42,13 +42,22 @@
     </header>
 
     <main>
+
         <form action="/contact" class="contact-form" method="POST" id="contactForm">
+
             <label for="fullName"></label>
             <input type="text" id="fullName" name="fullName" placeholder="Name">
+            <span class="error" id="nameError"></span>
+
             <label for="email"></label>
             <input type="text" id="email" name="email" placeholder="Email">
-            <label for="message" id="message"></label>
-            <textarea name="message" rows="10" cols="30" placeholder="Leave a message!"></textarea>
+            <span class="error" id="emailError"></span>
+
+            <label for="message"></label>
+            <textarea name="message" id="message" rows="10" cols="30" placeholder="Leave a message!"></textarea>
+            <span class="error" id="messageError"></span>
+
+
             <input type="submit" value="Submit" id="submit">
         </form>
     </main>
@@ -57,11 +66,11 @@
 
 
         <div class="footer-links">
-            <a href="https://github.com/J8310048">
+            <a href="https://github.com/J8310048" target="_blank">
                 <img src="Logos\GitHub.png" class="footer-logo footer-item" alt="Github logo in black color">
             </a>
 
-            <a href="https://www.linkedin.com/in/joshuab-i/">
+            <a href="https://www.linkedin.com/in/joshuab-i/" target="_blank">
                 <img src="Logos\LinkedIn.png" class="footer-logo footer-item" alt="LinkedIn Logo in black color">
             </a>
         </div>
@@ -69,7 +78,7 @@
         <div class="legal-links">
             <p>Privacy Page</p>
             <p>Terms and Conditions</p>
-            <p id="copyright">&copy; 2024 JBI All rights reserved</p>
+            <p id="copyright">&copy; 2025 JBI All rights reserved</p>
         </div>
 
 

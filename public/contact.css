@@ -337,7 +337,7 @@ body {
     border: none;
     border-radius: 10px;
     padding-left: 10px;
-    font-family: "Anitpasto-Medium-trial", sans-serif;
+    font-family: sans-serif;
 }
 
 #submit {
@@ -354,4 +354,11 @@ body {
     align-items: center;
     gap: 10px;
     font-family: sans-serif;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    display: block;
 }

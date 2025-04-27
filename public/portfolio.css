@@ -259,14 +259,21 @@
 
     #websiteCarousel,
     #appCarousel {
-        font-family: "Anitpasto-Light-trial", sans-serif;
         text-align: center;
         padding-top: 10%;
     }
 
-    #websiteCarousel h1,
-    #appCarousel h1 {
+    #sectionTitle {
         font-family: "Anitpasto-Bold-trial", sans-serif;
+    }
+
+    .caption-wrapper {
+        font-family: "Anitpasto-ExtraBold-trial", sans-serif;
+        ;
+    }
+
+    .carousel-desc {
+        font-family: "Anitpasto-Medium-trial", sans-serif;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -318,7 +325,9 @@
     }
 
     .caption-wrapper {
-        margin: auto;
+        margin-left: 10%;
+        text-align: left !important;
+        align-items: flex-start;
     }
 
     .mx-auto {
@@ -347,6 +356,12 @@ footer {
 
 /* GLOBAL STYLINGS BELOW */
 
+#websiteLogo a {
+    color: white;
+    text-decoration: none;
+    font-family: "Anitpasto-Bold-trial", sans-serif;
+}
+
 .navLinks a {
     text-decoration: none;
     font-family: "Antipasto-Regular-trial", sans-serif;
@@ -357,10 +372,9 @@ footer {
     background-color: white;
 }
 
-#websiteLogo a {
-    color: white;
+.carousel-item a {
     text-decoration: none;
-    font-family: "Anitpasto-Bold-trial", sans-serif;
+    color: black;
 }
 
 .footer-links a {
