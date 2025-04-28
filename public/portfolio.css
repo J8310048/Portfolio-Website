@@ -10,6 +10,7 @@
 
     /* NAVIGATION MENU CODE START */
 
+
     .navBar,
     .navRow a {
         background-color: #526cff;
@@ -350,6 +351,10 @@
         align-items: flex-start;
     }
 
+    .caption-wrapper h4 {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
+    }
+
     .mx-auto {
         margin-right: 15% !important;
     }
@@ -377,6 +382,9 @@
 
 
 /* GLOBAL STYLINGS BELOW */
+ul {
+    margin-bottom: 0;
+}
 
 main,
 footer {
@@ -413,6 +421,10 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
+#appCarousel {
+    padding-bottom: 10%;
+}
+
 .footer-links a {
     text-decoration: none;
 }
@@ -423,4 +435,34 @@ footer {
     align-items: center;
     gap: 10px;
     font-family: sans-serif;
+}
+
+.legal-links a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+
+.legal-links a.active {
+    font-weight: bold;
+    color: #00E6AF;
+    border-bottom: 2px solid #00E6AF;
+}
+
+.legal-links a:active {
+    font-weight: bold;
+    color: #00E6AF;
+    border-bottom: 2px solid #00E6AF;
+    background-color: white;
+}
+
+.legal-links a:hover {
+    border-bottom: 2px solid black;
+}
+
+footer {
+    background-color: #526cff;
+    color: white;
 }

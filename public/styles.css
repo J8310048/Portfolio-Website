@@ -248,8 +248,8 @@
     .navLinks,
     .navLinks a {
         text-decoration: none;
-        color: black;
-        background-color: white;
+        color: white;
+        background-color: #526cff;
         font-family: "Anitpasto-DemiBold-trial", sans-serif;
         font-size: 20px;
     }
@@ -323,6 +323,14 @@
     /* this sets the padding and sizes for all the logos in the tech stack and design tools section */
     .logos img {
         padding: 5%;
+    }
+
+    #portfolioTitle {
+        margin-bottom: 10%;
+    }
+
+    .caption-wrapper h2 {
+        font-family: "Anitpasto-Medium-trial", sans-serif;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -568,6 +576,10 @@
         align-items: flex-start;
     }
 
+    .caption-wrapper h4 {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
+    }
+
     .img-fluid {
         width: 25%;
     }
@@ -577,6 +589,11 @@
 /* below are the global stylings for my hero buttons, contact form, and copyright tag on this page */
 
 /* sets the background color to a darker shade of white. Helps to see carousel buttons  */
+
+ul {
+    margin-bottom: 0;
+}
+
 main,
 footer {
     background-color: rgb(203, 202, 202);
@@ -695,6 +712,36 @@ footer {
     text-align: center;
     gap: 10px;
     font-family: sans-serif;
+}
+
+.legal-links a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+
+.legal-links a.active {
+    font-weight: bold;
+    color: #00E6AF;
+    border-bottom: 2px solid #00E6AF;
+}
+
+.legal-links a:active {
+    font-weight: bold;
+    color: #00E6AF;
+    border-bottom: 2px solid #00E6AF;
+    background-color: white;
+}
+
+.legal-links a:hover {
+    border-bottom: 2px solid black;
+}
+
+footer {
+    background-color: #526cff;
+    color: white;
 }
 
 .error {
