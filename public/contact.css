@@ -345,16 +345,29 @@ body {
     cursor: pointer;
 }
 
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
 .footer-links a {
     text-decoration: none;
 }
 
 .legal-links {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     gap: 10px;
     font-family: sans-serif;
+}
+
+.line {
+    background-color: white;
+    width: 1px;
+    height: 38px;
+    margin: 0 1%;
 }
 
 .error {
@@ -394,4 +407,5 @@ body {
 footer {
     background-color: #526cff;
     color: white;
+    text-align: center;
 }
