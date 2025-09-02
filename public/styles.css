@@ -356,6 +356,11 @@
         margin: 5% 35%;
     }
 
+    /* gives the button a gray color when pressed */
+    #submit:active {
+        background-color: rgb(185, 185, 185);
+    }
+
     /* this aligns all the footer links in the center */
     .footer-links {
         text-align: center;
@@ -527,14 +532,24 @@
 
 
 
-    /* this is for the submit button at the bottom of the page */
+    /* this styles the submit button at the bottom of the page */
     #submit {
         border-radius: 20px;
         padding: 10px 15px;
         border: none;
         margin: 5% 35%;
+
     }
 
+    /* gives the button a gray color when the cursor hovers over the button */
+    #submit:hover {
+        background-color: rgb(185, 185, 185);
+    }
+
+    /* gives the button a white color when the button is clicked */
+    #submit:active {
+        background-color: rgb(255, 255, 255);
+    }
 
 
     /* this aligns all the footer links in the center */
