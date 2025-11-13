@@ -71,7 +71,7 @@ contactForm.addEventListener("submit", (event) => {
     console.log("Email:", email);
     console.log("Message:", message);
 
-    fetch("https://portfolio-website-pogv.onrender.com/contact", {
+    fetch("https://portfolio-website-pogv.onrender.com/", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
