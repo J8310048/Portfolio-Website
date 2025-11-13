@@ -1,4 +1,4 @@
-require('dotenv').config()
+const dotenv = require('dotenv');
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -8,6 +8,7 @@ const { error } = require('console');
 const sendContactEmail = require("./public/mail.js");
 
 app.use(cors());
+dotenv.config()
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -17,7 +18,7 @@ app.get("/", (req, res) => {
 })
 
 
-app.post("/contact", async (req, res) => {
+app.post("/", async (req, res) => {
 
     const { fullName, email, message } = req.body
 
