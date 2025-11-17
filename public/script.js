@@ -23,7 +23,7 @@ contactForm.addEventListener("submit", async (event) => {
 
     try {
         // 1️⃣ Get access token (backend handles CORS)
-        const tokenResponse = await fetch("http://localhost:3000/zoho-token", {
+        const tokenResponse = await fetch("https://portfolio-website-pogv.onrender.com/zoho-token", {
             method: "POST"
         });
 
@@ -40,7 +40,7 @@ contactForm.addEventListener("submit", async (event) => {
         };
 
         // 3️⃣ Submit lead via your backend
-        const zohoResponse = await fetch("http://localhost:3000/zoho-lead", {
+        const zohoResponse = await fetch("https://portfolio-website-pogv.onrender.com/zoho-lead", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
