@@ -105,7 +105,7 @@
     }
 
 
-    /* this spaces out the contact me button and portfolio button */
+    /* this spaces out the contact me button and services button */
     .hero-buttons {
         display: flex;
         justify-content: space-evenly;
@@ -113,11 +113,11 @@
 
     /* this sets all of the content from tech stack to testimonials inside of a grid */
     .skills-section {
-        display: grid;
-        grid-auto-flow: row;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         margin-top: 30%;
-        row-gap: 40px;
+        row-gap: 100px;
     }
 
 
@@ -150,13 +150,12 @@
         border-radius: 20px;
         padding: 10px 15px;
         border: none;
-        margin: 5% 35%;
+        margin: 20% 25%;
     }
 
-    /* this sets an image size for the github and linkedin icons */
-    .footer-logo {
-        width: 15%;
-        height: 75%;
+    /* gives the button a gray color when pressed */
+    #submit:active {
+        background-color: rgb(185, 185, 185);
     }
 
     /* this aligns all the footer links in the center */
@@ -164,6 +163,11 @@
         text-align: center;
         align-items: center;
         justify-items: center;
+    }
+
+    /* helps space the terms and privacy links from top to bottom */
+    .legal-links {
+        margin: 10% 0;
     }
 
     /* this sets a padding for each footer link */
@@ -176,7 +180,7 @@
 
 
     .carousel-item img {
-        width: 50%;
+        width: 70%;
     }
 
     .caption-wrapper h2 {
@@ -187,6 +191,11 @@
 @media (min-width: 425px) {
     .img-fluid {
         width: 50%;
+    }
+
+    .services-table th,
+    .services-table td {
+        padding: 5%;
     }
 }
 
@@ -303,7 +312,7 @@
         line-height: 1;
     }
 
-    /* this spaces out the contact me button and portfolio button */
+    /* this spaces out the contact me button and services button */
     .hero-buttons {
         display: grid;
         grid-auto-flow: column;
@@ -313,8 +322,8 @@
 
     /* this sets all of the content from tech stack to testimonials inside of a grid */
     .skills-section {
-        display: grid;
-        grid-auto-flow: row;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         margin-top: 10%;
         row-gap: 50px;
@@ -325,7 +334,7 @@
         padding: 5%;
     }
 
-    #portfolioTitle {
+    #servicesTitle {
         margin-bottom: 10%;
     }
 
@@ -378,6 +387,12 @@
 @media only screen and (min-width: 433px) and (max-width: 525px) {
     .hero-buttons {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 1259px) {
+    .accordion .card-header .btn {
+        overflow: scroll;
     }
 }
 
@@ -481,38 +496,10 @@
         row-gap: 150px;
     }
 
-    .midSection {
-        display: flex;
-        flex-direction: row;
-        font-family: "Anitpasto-ExtraBold-trial", sans-serif;
-        justify-content: space-around;
-
-
-        #techStack,
-        #designTools {
-            border-radius: 5px;
-            border: black solid thin;
-            padding: 3% 1%;
-            margin: auto;
-        }
-
-        #techStack,
-        #designTools {
-            width: 30%;
-        }
-
-
-        #designTools img {
-            width: 15vh;
-            height: 15vh;
-            padding: 4%;
-        }
-
-        #techStack img {
-            width: 12vh;
-            height: 12vh;
-            padding: 1%;
-        }
+    .services-table th,
+    .services-table td {
+        font-size: larger;
+        padding: 1% 5%;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -605,15 +592,18 @@
 
 /* sets the background color to a darker shade of white. Helps to see carousel buttons  */
 
+/* removes default margin from unordered lists */
 ul {
     margin-bottom: 0;
 }
 
+/* sets background color for main content and footer sections */
 main,
 footer {
     background-color: rgb(203, 202, 202);
 }
 
+/* styles the website logo link in the navigation bar */
 #websiteLogo a {
     font-family: "Anitpasto-Bold-trial", sans-serif;
 }
@@ -623,23 +613,25 @@ footer {
     background-color: white;
 }
 
-
+/* styles the navigation bar and navigation row links with white text and removes underline */
 .navBar,
 .navRow a {
     color: white;
     text-decoration: none;
-    font-family: "Antipasto-Regular-trial",
-        sans-serif;
+    font-family: "Antipasto-Regular-trial", sans-serif;
 }
 
+/* removes text decoration from hero section button links */
 .hero-buttons a {
     text-decoration: none;
 }
 
+/* sets text color to white for hero section */
 .hero-section {
     color: white;
 }
 
+/* styles the redirect buttons (Contact Me, Services) in the hero section */
 .redirect-buttons {
     border-radius: 20px;
     padding: 10px 15px;
@@ -648,6 +640,7 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
+/* styles the Contact Me button with teal background */
 #contact-button {
     background-color: #00E6AF;
     font-family: "Anitpasto-DemiBold-trial", sans-serif;
@@ -655,54 +648,86 @@ footer {
 
 }
 
+/* sets text color to black for Contact Me button link */
 #contact-button a {
     color: black;
 }
 
-#portfolio-button {
+/* styles the Services button with black background */
+#services-button {
     background-color: black;
     color: white;
     font-family: "Anitpasto-ExtraBold-trial", sans-serif;
     font-size: 16px;
 }
 
-#portfolio-button a {
+/* sets text color to white for Services button link */
+#services-button a {
     color: white;
 }
 
+/* styles the skills/services section heading */
 .skills-section {
     font-family: "Anitpasto-ExtraBold-trial", sans-serif;
 }
 
+/* wrapper container for the services pricing table with centered margin */
+.services-table-wrapper {
+    margin: auto;
+    font-family: sans-serif;
+    border-radius: 8px;
+    overflow: auto;
+}
+
+/* collapses borders between table cells for a clean look */
+.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* ensures single border between cells */
+}
+
+/* styles table headers and data cells with borders and padding */
+.services-table th,
+.services-table td {
+    border: 1px solid #000;
+    text-align: left;
+}
+
+/* styles the caption wrapper for portfolio carousel items */
 .caption-wrapper {
     font-family: "Anitpasto-ExtraBold-trial", sans-serif;
     max-width: 500px;
 }
 
+/* styles the carousel description text visible on larger screens */
 .carousel-desc {
     font-family: "Anitpasto-Medium-trial", sans-serif;
 }
 
+/* sets width for carousel slide class */
 .class slide {
     width: 10%;
 }
 
+/* removes text decoration and sets text color for carousel item links */
 .carousel-item a {
     text-decoration: none;
     color: black;
 }
 
+/* styles responsive images with border radius and shadow */
 .img-fluid {
     border-radius: 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
+/* flexbox layout for contact form with vertical column direction */
 .contact-form {
     display: flex;
     flex-direction: column;
 }
 
-
+/* styles form inputs and textareas with rounded corners and padding */
 .contact-form input,
 .contact-form textarea {
     border: none;
@@ -711,36 +736,39 @@ footer {
     font-family: sans-serif;
 }
 
-
+/* makes submit button cursor a pointer on hover */
 #submit {
     cursor: pointer;
 }
 
+/* flexbox layout for footer links centered horizontally */
 .footer-links {
     display: flex;
     justify-content: center;
     margin-top: 3%;
 }
 
+/* removes text decoration from footer links */
 .footer-links a {
     text-decoration: none;
 }
 
+.footer-item {
+    width: 70%;
+}
+
+/* flexbox layout for legal links (Privacy, Terms, Consent) centered and wrapped */
 .legal-links {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     font-family: sans-serif;
+    margin: 5% 0;
 }
 
-.line {
-    background-color: white;
-    width: 1px;
-    height: 38px;
-    margin: 0 1%;
-}
-
+/* styles legal links with white text and smooth transition on hover/active */
 .legal-links a {
     text-decoration: none;
     color: white;
@@ -748,13 +776,14 @@ footer {
     transition: all 0.3s ease;
 }
 
-
+/* highlights active legal link with teal color and bottom border */
 .legal-links a.active {
     font-weight: bold;
     color: #00E6AF;
     border-bottom: 2px solid #00E6AF;
 }
 
+/* styles active legal link state with teal text and white background */
 .legal-links a:active {
     font-weight: bold;
     color: #00E6AF;
@@ -762,16 +791,19 @@ footer {
     background-color: white;
 }
 
+/* styles legal link on hover with black bottom border */
 .legal-links a:hover {
     border-bottom: 2px solid black;
 }
 
+/* sets footer background to blue with white text and centered alignment */
 footer {
     background-color: #526cff;
     color: white;
     text-align: center;
 }
 
+/* styles form validation error messages in red with custom font */
 .error {
     color: red;
     font-size: 0.9em;
@@ -779,4 +811,52 @@ footer {
     display: block;
     font-family: "Anitpasto-Bold-trial", sans-serif;
     text-align: start;
+}
+
+.accordion {
+    margin: 0 20%;
+}
+
+/* FAQ accordion — add horizontal margins and inner side padding for questions and answers at all breakpoints */
+.accordion .card {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* ensure the header (contains the question button) has side padding so the question text doesn't touch edges */
+.accordion .card-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* target the question button itself for additional horizontal spacing if needed */
+.accordion .card-header .btn {
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+    /* keep within header padding */
+    padding-right: 0;
+    /* overflow: scroll; */
+}
+
+/* answers: add side padding so content is indented from the card edges */
+.accordion .card-body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+
+.btn-link,
+.btn-link:hover,
+.btn-link:focus {
+    font-family: "Anitpasto-Bold-trial", sans-serif;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+}
+
+.btn-link:active {
+    color: blue;
+    text-decoration: none;
 }

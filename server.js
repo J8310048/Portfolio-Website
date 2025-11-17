@@ -1,40 +1,71 @@
-require('dotenv').config()
 const express = require('express');
+const axios = require('axios');
 const cors = require('cors');
+const qs = require('qs');
+require('dotenv').config();
+
 const app = express();
-const nodemailer = require("nodemailer");
-exports.app = app;
-const { error } = require('console');
-const sendContactEmail = require("./public/mail.js");
+const PORT = 3000;
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://127.0.0.1:5500'
+}));
 
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.send("The server is awaiting your response")
-})
+// 🔄 Refresh Zoho Access Token
+async function refreshAccessToken() {
+    const data = qs.stringify({
+        refresh_token: process.env.ZREFRESH_TOKEN,
+        client_id: process.env.ZCLIENT_ID,
+        client_secret: process.env.ZCLIENT_SECRET,
+        grant_type: 'refresh_token'
+    });
 
+    const response = await axios.post(
+        'https://accounts.zoho.com/oauth/v2/token',
+        data,
+        { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+    );
 
-app.post("/contact", async (req, res) => {
+    return response.data.access_token;
+}
 
-    const { fullName, email, message } = req.body
-
+// ✅ 1️⃣ GET ACCESS TOKEN
+app.post('/zoho-token', async (req, res) => {
     try {
-        await sendContactEmail(fullName, email, message);
-        res.status(200).json({ comment: "message successful!!!!!!!!!!!!!" })
-    } catch (error) {
-        console.error("Error sending message: ", error)
-        res.status(500).json({ error: "YOU FAILED TO SEND YOUR MESSAGE! WHAT IS WRONG WITH YOU?!?!" })
+        const accessToken = await refreshAccessToken();
+        res.json({ access_token: accessToken });
+    } catch (err) {
+        console.error("Error getting token:", err.response?.data || err);
+        res.status(500).json({ error: "Failed to get token" });
     }
+});
 
+// ✅ 2️⃣ SEND LEAD TO ZOHO
+app.post('/zoho-lead', async (req, res) => {
+    try {
+        const accessToken = await refreshAccessToken();
 
+        const zohoResponse = await axios.post(
+            'https://www.zohoapis.com/crm/v8/Leads',
+            { data: [req.body] },
+            {
+                headers: {
+                    'Authorization': `Zoho-oauthtoken ${accessToken}`,
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
 
-})
+        res.json(zohoResponse.data);
 
-app.listen(3000, (err) => {
-    if (err) {
-        throw err
-    } else console.log("Hello! Your app is running now! " + 3000)
+    } catch (err) {
+        console.error("Error sending lead:", err.response?.data || err);
+        res.status(err.response?.status || 500).json(err.response?.data);
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
 });

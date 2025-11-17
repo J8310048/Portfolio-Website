@@ -10,85 +10,56 @@ hamburgerMenu.addEventListener("click", () => {
 
 // NAV MENU CODE END
 
-
-
-
-
-// CONTACT FORM SUBMISSION WITH VALIDATION START
+// CONTACT FORM SUBMISSION WITH SERVER-PROXIED ZOHO TOKEN
 const contactForm = document.getElementById("contactForm");
+contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-contactForm.addEventListener("submit", (event) => {
-    event.preventDefault(); // Stop form from reloading
+    // Get form data
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-    // Grab values
-    const fullNameInput = document.getElementById("fullName");
-    const emailInput = document.getElementById("email");
-    const messageInput = document.getElementById("message");
+    try {
+        // 1️⃣ Get access token (backend handles CORS)
+        const tokenResponse = await fetch("http://localhost:3000/zoho-token", {
+            method: "POST"
+        });
 
-    const name = fullNameInput.value.trim();
-    const email = emailInput.value.trim();
-    const message = messageInput.value.trim();
+        const tokenData = await tokenResponse.json();
+        const accessToken = tokenData.access_token;
+        console.log("Access Token:", accessToken);
 
-    // Grab error elements
-    const nameError = document.getElementById("nameError");
-    const emailError = document.getElementById("emailError");
-    const messageError = document.getElementById("messageError");
+        // 2️⃣ Build lead payload
+        const leadData = {
+            First_Name: firstName,
+            Last_Name: lastName,
+            Email: email,
+            Description: message
+        };
 
-    // Clear previous errors
-    nameError.textContent = "";
-    emailError.textContent = "";
-    messageError.textContent = "";
+        // 3️⃣ Submit lead via your backend
+        const zohoResponse = await fetch("http://localhost:3000/zoho-lead", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(leadData)
+        });
 
-    let isValid = true;
+        const result = await zohoResponse.json();
+        console.log("Zoho Response:", result);
 
-    if (!name) {
-        nameError.textContent = "Name is required.";
-        isValid = false;
-    }
-
-    if (!email) {
-        emailError.textContent = "Email is required.";
-        isValid = false;
-    } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-        emailError.textContent = "Enter a valid email address.";
-        isValid = false;
-    }
-
-    if (!message) {
-        messageError.textContent = "Message is required.";
-        isValid = false;
-    }
-
-    if (!isValid) {
-        return; // STOP if invalid
-    }
-
-    // Proceed with submission if valid
-    const formData = new FormData(contactForm);
-    const formCapture = new URLSearchParams(formData);
-
-    console.log("Full Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
-
-    fetch("https://portfolio-website-pogv.onrender.com/contact", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: formCapture.toString()
-    })
-        .then(res => res.text())
-        .then(data => {
-            console.log("Here's your response from the server:", data);
+        if (result.data && result.data[0].code === "SUCCESS") {
             alert("Form submission successful!");
-            contactForm.reset(); // Clear form after success
-        })
-        .catch(err => console.error("Here's your fetch error:", err));
+            contactForm.reset();
+        } else {
+            alert("There was an issue submitting your form. Check console.");
+        }
+
+    } catch (err) {
+        console.error("Error submitting lead:", err);
+        alert("Something went wrong. Check console.");
+    }
 });
-// CONTACT FORM SUBMISSION WITH VALIDATION END
-
-
-
-
-

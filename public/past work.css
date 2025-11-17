@@ -1,0 +1,488 @@
+@import url("./antipasto-font.css");
+
+* {
+    margin: 0;
+}
+
+/* Below are the breakpoints for the navigation menu on smart phone screens */
+
+@media only screen and (min-width: 320px) and (max-width: 432px) {
+
+    /* NAVIGATION MENU CODE START */
+
+
+    .navBar,
+    .navRow a {
+        background-color: #526cff;
+    }
+
+    /* this hides the nav bar links so when the onclick attribute is triggered when clicking the hamburger menu, the links will be appear */
+    .navLinks {
+        display: none;
+    }
+
+    /* when a nav link is pressed, text color will turn black with a white background */
+    .navLinks a:active {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+    }
+
+    /* this puts the logo and hamburger menu in a row */
+    .navRow {
+        display: flex;
+        justify-content: space-between;
+        padding: 10% 5%;
+    }
+
+    /* this spaces out the three lines in the hamburger menu and organizes them into a column */
+    .hamburgerMenu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* this gives each line in the hamburger menu a color, height, and width */
+    #menuLine {
+        background-color: white;
+        width: 40px;
+        height: 5px;
+        border-radius: 10px;
+    }
+
+    .navLinks,
+    .navLinks a {
+        text-decoration: none;
+        color: white;
+        background-color: #526cff;
+        font-family: "Anitpasto-DemiBold-trial", sans-serif;
+    }
+
+    /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and tablet screens*/
+    .show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        font-size: 20px;
+        row-gap: 10px;
+        padding: 5% 0;
+    }
+
+    /* NAVIGATION MENU CODE END */
+
+    #websiteCarousel,
+    #appCarousel {
+        font-family: "Anitpasto-Medium-trial", sans-serif;
+        text-align: center;
+        padding: 20% 0;
+    }
+
+    #websiteCarousel h1,
+    #appCarousel h1 {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
+        margin-bottom: 10%;
+    }
+
+    /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
+    footer {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 20px;
+    }
+
+    /* this aligns all the footer links in the center */
+    .footer-links {
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* this sets a padding for each footer link */
+    .footer-item {
+        padding: 10px;
+    }
+}
+
+
+
+/* Below are the breakpoints for the navigation menu on tablet screens */
+
+@media only screen and (min-width: 433px) and (max-width: 768px) {
+    #websiteLogo {
+        font-size: 25px;
+    }
+
+    /* NAVIGATION MENU CODE START */
+
+    /* this gives the entire nav section a blue background color with white text */
+
+    /* this puts the logo and hamburger menu in a row */
+    .navRow {
+        display: flex;
+        justify-content: space-between;
+        padding: 4% 10%;
+        margin: auto;
+    }
+
+    /* this spaces out the three lines in the hamburger menu and organizes them into a column */
+    .hamburgerMenu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .navBar,
+    .navRow a {
+        background-color: #526cff;
+    }
+
+    /* when a nav link is pressed, text color will turn black with a white background */
+    .navLinks a:active {
+        text-decoration: none;
+        color: black;
+        background-color: white;
+    }
+
+    /* this gives each line in the hamburger menu a color, height, and width */
+    #menuLine {
+        background-color: white;
+        width: 40px;
+        height: 5px;
+        border-radius: 10px;
+    }
+
+    /* this hides the nav bar links so when the onclick attribute is triggered when clicking the hamburger menu, the links will be appear */
+    .navLinks {
+        display: none;
+    }
+
+    /* when a nav link is pressed, text color will turn black with a white background */
+    .navLinks,
+    .navLinks a {
+        text-decoration: none;
+        color: white;
+        background-color: #526cff;
+        font-family: "Anitpasto-DemiBold-trial", sans-serif;
+        font-size: 20px;
+    }
+
+    /* this will be toggled through a click event for the hamburger menu. It shows the navigation links for mobile and tablet screens*/
+    .show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        font-size: 20px;
+        row-gap: 10px;
+        padding: 5% 0;
+    }
+
+    /* NAVIGATION MENU CODE END */
+
+    #websiteCarousel,
+    #appCarousel {
+        font-family: "Anitpasto-Medium-trial", sans-serif;
+        text-align: center;
+        padding: 20% 0;
+    }
+
+    #websiteCarousel h1,
+    #appCarousel h1 {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
+        margin-bottom: 10%;
+    }
+
+    /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
+    footer {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 20px;
+    }
+
+    /* this aligns all the footer links in the center */
+    .footer-links {
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* this sets a padding for each footer link */
+    .footer-item {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+
+
+    .carousel-item img {
+        width: 50%;
+    }
+
+    .caption-wrapper h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 425px) {
+    .img-fluid {
+        width: 50%;
+    }
+
+    #motionPhoto {
+        width: 50%;
+    }
+}
+
+@media (min-width: 609px) {
+    .img-fluid {
+        width: 35%;
+    }
+
+    #motionPhoto {
+        width: 35%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #websiteLogo {
+        font-size: 35px;
+    }
+
+    /* NAVIGATION MENU CODE START */
+    .navBar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: sticky;
+        justify-content: space-between;
+        top: 0;
+        z-index: 1000;
+        background-color: #526cff;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        /* Optional: soft depth */
+    }
+
+    .navLinks {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navLinks li a {
+        text-decoration: none;
+        color: white;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+    }
+
+
+    .navLinks li a:hover {
+        border-bottom: 2px solid black;
+    }
+
+    .navLinks li a:active,
+    .navLinks li a.active {
+        font-weight: bold;
+        color: #00E6AF;
+        border-bottom: 2px solid #00E6AF;
+    }
+
+    /* NAVIGATION MENU CODE END */
+
+    #websiteCarousel,
+    #appCarousel {
+        text-align: center;
+        padding-top: 10%;
+    }
+
+    #sectionTitle {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
+    }
+
+    .caption-wrapper {
+        font-family: "Anitpasto-ExtraBold-trial", sans-serif;
+    }
+
+    .carousel-desc {
+        font-family: "Anitpasto-Medium-trial", sans-serif;
+    }
+
+    /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
+    footer {
+        display: grid;
+        grid-auto-flow: row;
+        gap: 20px;
+    }
+
+    /* this aligns all the footer links in the center */
+    .footer-links {
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    /* this sets a padding for each footer link */
+    .footer-item {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 1023.98px) {
+    .carousel-desc {
+        display: none;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    #portfolioTitle {
+        margin-bottom: 10%;
+    }
+
+    .caption-wrapper {
+        margin-left: 10%;
+        text-align: left !important;
+        align-items: flex-start;
+    }
+
+    .caption-wrapper h4 {
+        font-family: "Anitpasto-Bold-trial", sans-serif;
+    }
+
+    .mx-auto {
+        margin-right: 15% !important;
+    }
+
+    .img-fluid {
+        width: 25%;
+    }
+
+    .carousel-title {
+        font-size: 2rem;
+    }
+
+    .carousel-desc {
+        font-size: 1rem;
+        opacity: 0.9;
+        display: block;
+    }
+
+}
+
+
+/* below are the global stylings for my hero buttons, contact form, and copyright tag on this page */
+
+/* sets the background color to a darker shade of white. Helps to see carousel buttons  */
+
+
+/* GLOBAL STYLINGS BELOW */
+ul {
+    margin-bottom: 0;
+}
+
+main,
+footer {
+    background-color: rgb(203, 202, 202);
+}
+
+#websiteLogo a {
+    color: white;
+    text-decoration: none;
+    font-family: "Anitpasto-Bold-trial", sans-serif;
+}
+
+.navLinks a {
+    text-decoration: none;
+    font-family: "Antipasto-Regular-trial", sans-serif;
+}
+
+/* when a nav link is clicked, it will have a white background */
+.navLinks a:active {
+    background-color: white;
+}
+
+.caption-wrapper {
+    max-width: 500px;
+}
+
+.carousel-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.img-fluid {
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#appCarousel {
+    padding-bottom: 10%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.footer-links a {
+    text-decoration: none;
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    font-family: sans-serif;
+}
+
+.line {
+    background-color: white;
+    width: 1px;
+    height: 38px;
+    margin: 0 1%;
+}
+
+.legal-links a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+
+.legal-links a.active {
+    font-weight: bold;
+    color: #00E6AF;
+    border-bottom: 2px solid #00E6AF;
+}
+
+.legal-links a:active {
+    font-weight: bold;
+    color: #00E6AF;
+    border-bottom: 2px solid #00E6AF;
+    background-color: white;
+}
+
+.legal-links a:hover {
+    border-bottom: 2px solid black;
+}
+
+footer {
+    background-color: #526cff;
+    color: white;
+    text-align: center;
+}
+
+/* sets width for footer items */
+.footer-item {
+    width: 70%;
+    margin: 0 auto;
+}

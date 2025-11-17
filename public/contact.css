@@ -108,6 +108,11 @@
         justify-items: center;
     }
 
+    /* helps space the terms and privacy links from top to bottom */
+    .legal-links {
+        margin: 10% 0;
+    }
+
     /* this sets a padding for each footer link */
     .footer-item {
         padding: 10px;
@@ -366,6 +371,12 @@ body {
 
 .footer-links a {
     text-decoration: none;
+}
+
+/* sets width for footer items */
+.footer-item {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .legal-links {
