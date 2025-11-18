@@ -684,6 +684,7 @@ footer {
     font-family: sans-serif;
     border-radius: 8px;
     overflow: auto;
+    padding: 0 2%;
 }
 
 /* collapses borders between table cells for a clean look */
@@ -697,7 +698,6 @@ footer {
 .services-table th,
 .services-table td {
     border: 1px solid #000;
-    text-align: left;
 }
 
 /* styles the caption wrapper for portfolio carousel items */
