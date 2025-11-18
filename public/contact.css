@@ -428,6 +428,11 @@ body {
     border-bottom: 2px solid black;
 }
 
+.contact-form h2 {
+    font-family: "Anitpasto-Bold-trial", sans-serif;
+    margin-bottom: 10px;
+}
+
 footer {
     background-color: #526cff;
     color: white;
