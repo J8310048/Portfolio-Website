@@ -388,12 +388,14 @@
     .hero-buttons {
         display: none;
     }
+
 }
 
 @media only screen and (max-width: 1259px) {
     .accordion .card-header .btn {
         overflow: scroll;
     }
+
 }
 
 
@@ -500,6 +502,11 @@
     .services-table td {
         font-size: larger;
         padding: 1% 5%;
+    }
+
+    /* hides the faq disclaimer after 769px */
+    #faq-disclaimer {
+        display: none;
     }
 
     /* this sets my footer, it's set in a grid to help space out my contact form, footer links, and the copyright tag */
@@ -836,7 +843,6 @@ footer {
     padding-left: 0;
     /* keep within header padding */
     padding-right: 0;
-    /* overflow: scroll; */
 }
 
 /* answers: add side padding so content is indented from the card edges */
