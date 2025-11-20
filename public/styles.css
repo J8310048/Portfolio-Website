@@ -118,6 +118,7 @@
         text-align: center;
         margin-top: 30%;
         row-gap: 100px;
+        padding-bottom: 40%;
     }
 
 
@@ -191,11 +192,6 @@
 @media (min-width: 425px) {
     .img-fluid {
         width: 50%;
-    }
-
-    .services-table th,
-    .services-table td {
-        padding: 5%;
     }
 }
 
@@ -327,6 +323,7 @@
         text-align: center;
         margin-top: 10%;
         row-gap: 50px;
+        padding-bottom: 40%;
     }
 
     /* this sets the padding and sizes for all the logos in the tech stack and design tools section */
@@ -496,12 +493,7 @@
         text-align: center;
         margin-top: 10%;
         row-gap: 150px;
-    }
-
-    .services-table th,
-    .services-table td {
-        font-size: larger;
-        padding: 1% 5%;
+        padding-bottom: 10%;
     }
 
     /* hides the faq disclaimer after 769px */
@@ -605,8 +597,7 @@ ul {
 }
 
 /* sets background color for main content and footer sections */
-main,
-footer {
+main {
     background-color: rgb(203, 202, 202);
 }
 
@@ -698,6 +689,20 @@ footer {
 .services-table th,
 .services-table td {
     border: 1px solid #000;
+    padding: 15px;
+}
+
+.services-table th,
+#service-header {
+    font-size: larger;
+}
+
+.design-deliverables,
+.coding-deliverables {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
 
 /* styles the caption wrapper for portfolio carousel items */
@@ -810,6 +815,13 @@ footer {
     text-align: center;
 }
 
+
+#contact-me-header {
+    font-family: "Anitpasto-ExtraBold-trial", sans-serif;
+    font-size: 50px;
+}
+
+
 /* styles form validation error messages in red with custom font */
 .error {
     color: red;
@@ -839,7 +851,7 @@ footer {
 /* target the question button itself for additional horizontal spacing if needed */
 .accordion .card-header .btn {
     width: 100%;
-    text-align: left;
+    /* text-align: left; */
     padding-left: 0;
     /* keep within header padding */
     padding-right: 0;
@@ -851,7 +863,11 @@ footer {
     padding-right: 1rem;
 }
 
-
+#answerOne {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
 
 .btn-link,
 .btn-link:hover,

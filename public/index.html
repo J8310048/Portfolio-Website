@@ -102,99 +102,56 @@
 
 
             <div class="services-table-wrapper">
-                <h1 style="font-family: Anitpasto-ExtraBold-trial;" id="servicesTitle">Services & Pricing</h1>
+                <h1 style="font-family: Anitpasto-ExtraBold-trial;" id="servicesTitle">Services</h1>
 
-                <table class="services-table" style="text-align:center;">
+                <!-- Price column removed — table now shows Service + Description only -->
+                <table class="services-table">
                     <thead>
                         <tr>
-                            <th style="text-align:center;">Service</th>
-                            <th style="text-align:center;">Description</th>
-                            <th style="text-align:center;">Price</th>
+                            <th>Service</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="text-align:center;">Flyers</td>
-                            <td style="text-align:center;">Simple Templated,<br><br> Templated with Custom Design,
-                                <br><br> or Custom
-                                designed flyer
-                            </td>
-                            <td style="text-align:center;">$300-$500+</td>
-                        </tr>
-
-                        <tr>
-                            <td style="text-align:center;">PowerPoint Presentations</td>
-
-                            <!-- Description must remain left-aligned -->
-                            <td style="text-align:left;">
-                                <ul>
-                                    <li>Full Deck</li>
-                                    <li>Per Slide</li>
-                                    <li>Corporate Per Slide</li>
-                                </ul>
-                            </td>
-
-                            <!-- Price column remains centered; UL displayed as inline-block so the list is centered as a block -->
-                            <td style="text-align:center;">
-                                <ul style="display:inline-block; text-align:left; margin:0; padding-left:1rem;">
-                                    <li>$350–$750</li>
-                                    <li>$40–$60</li>
-                                    <li>$75–$90</li>
-                                </ul>
+                            <td id="service-header"><strong>Web Design</strong></td>
+                            <td>
+                                <!-- insert at line 119: list of design deliverables -->
+                                <div class="design-deliverables" id="deliverables-list">
+                                    <div class="deliverable">- Branding + visual direction (colors, fonts, styles)</div>
+                                    <div class="deliverable">- Page layouts and structure (wireframes, mockups)</div>
+                                    <div class="deliverable">- UI design (buttons, forms, menus, animations, components)
+                                    </div>
+                                    <div class="deliverable">- Mobile-responsive design</div>
+                                    <div class="deliverable">- User experience planning (how users move through the
+                                        site)
+                                    </div>
+                                    <div class="deliverable">- Graphic elements (icons, banners, hero images)</div>
+                                    <div class="deliverable">- Design systems / style guides</div>
+                                    <div class="deliverable">- Webpage Development (Wordpress, Wix, Framer, Figma,
+                                        Shopify, etc.)
+                                    </div>
+                                </div>
                             </td>
                         </tr>
 
                         <tr>
-                            <td style="text-align:center;">Business Cards</td>
-                            <td style="text-align:center;">Professional business card design</td>
-                            <td style="text-align:center;">$70–$140</td>
-                        </tr>
-
-                        <tr>
-                            <td style="text-align:center;">Web Design</td>
-                            <td style="text-align:center;">
-                                <ul style="display:inline-block; text-align:left; margin:0; padding-left:1rem;">
-                                    <li>1–3 Pages</li>
-                                    <li>More than 4 Pages</li>
-                                </ul>
-                            </td>
-                            <td style="text-align:center;">
-                                <ul style="display:inline-block; text-align:left; margin:0; padding-left:1rem;">
-                                    <li>$400–$600 (1–3 pages)</li>
-                                    <li>$700+ (4+ pages)</li>
-                                </ul>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="text-align:center;">Web Development</td>
-                            <td style="text-align:center;">
-                                <ul style="display:inline-block; text-align:left; margin:0; padding-left:1rem;">
-                                    <li>1–3 Pages</li>
-                                    <li>More than 4 Pages</li>
-                                </ul>
-                            </td>
-                            <td style="text-align:center;">
-                                <ul style="display:inline-block; text-align:left; margin:0; padding-left:1rem;">
-                                    <li>$500–$700 (1–3 pages)</li>
-                                    <li>$800+ (4+ pages)</li>
-                                </ul>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="text-align:center;">Web Design + Development</td>
-                            <td style="text-align:center;">
-                                <ul style="display:inline-block; text-align:left; margin:0; padding-left:1rem;">
-                                    <li>1–3 Pages</li>
-                                    <li>More than 4 Pages</li>
-                                </ul>
-                            </td>
-                            <td style="text-align:center;">
-                                <ul style="display:inline-block; text-align:left; margin:0; padding-left:1rem;">
-                                    <li>$750–$950 (1–3 pages)</li>
-                                    <li>$1000+ (4+ pages)</li>
-                                </ul>
+                            <td id="service-header"><strong>Coding</strong></td>
+                            <td>
+                                <div class="coding-deliverables" id="coding-list">
+                                    <div class="deliverable">- Frontend development (HTML, CSS, JavaScript, React.js)
+                                    </div>
+                                    <div class="deliverable">- Backend development (Node.js, Express.js, databases)
+                                    </div>
+                                    <div class="deliverable">- Fullstack web applications</div>
+                                    <div class="deliverable">- CMS integration (WordPress)</div>
+                                    <div class="deliverable">- API integration (third-party services, contact forms,
+                                        databases, etc.)
+                                    </div>
+                                    <div class="deliverable">- Performance optimization and accessibility</div>
+                                    <div class="deliverable">- SEO best practices</div>
+                                    <div class="deliverable">- Website maintenance and updates</div>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -393,19 +350,17 @@
                         </h2>
                     </div>
                     <div id="collapseZero" class="collapse" aria-labelledby="headingZero" data-parent="#faqAccordion">
-                        <div class="card-body" style="font-family: sans-serif;">
-                            The process starts with getting to know you—who you are, what you’re aiming for, and the
-                            vision behind your project. I’ll ask things like <strong>“What made you want a website?” and
-                                “How do
-                                my skills fit what you’re trying to build?”</strong> Once I know there’s a good fit, I
-                            create initial
-                            design concepts or a project plan for you to look over.<br><br>
+                        <div class="card-body" id="answerOne" style="font-family: sans-serif;">
+                            <div>The process starts with getting to know you, so I'll send you a questionnaire. This
+                                helps me
+                                understand your goals, target audience, design preferences, and any specific features
+                                you
+                                want.</div>
 
-                            After we lock in the direction, I start designing or developing your project and keep you
-                            updated along the way. I’ll check in for feedback to make sure we’re always aligned. When
-                            everything’s done, we do a final review and make any last adjustments before delivery.
-                            <em><strong>Clear communication and collaboration are the foundation of the whole
-                                    thing.</strong></em>
+                            <div>After we lock in the direction, I start designing or coding your project. When
+                                everything’s done, we'll revise the project to make any last adjustments before hosting.
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -421,14 +376,7 @@
                     </div>
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faqAccordion">
                         <div class="card-body" style="font-family: sans-serif;">
-                            Turnaround time depends on project scope. Simple designs (flyers, business cards) typically
-                            take 3-5 business days. <br><br>PowerPoints could take up to 1 week depending on complexity
-                            scope,
-                            and design. Web design projects take 1-2 weeks, and full-stack development takes
-                            2-4 weeks depending on complexity.<br><br> But it can vary based on your specific needs and
-                            <strong>feedback
-                                speed</strong>. As the saying goes, "I move as fast as you." Clear communication and
-                            timely responses can help keep your project on schedule.
+                            Web design projects can take up to 4 weeks, but it can vary based on your specific needs.
                         </div>
                     </div>
                 </div>
@@ -445,8 +393,8 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
                         <div class="card-body" style="font-family: sans-serif;">
                             Yes! I include up to 3 rounds of revisions with most projects. Additional revisions are
-                            available for a small fee depending on the project <strong>($25-$50 for Flyers and Business
-                                Cards, $50-$75 for PowerPoints, $100+ for Websites)</strong>.<br><br>
+                            available for a small fee depending on the project <strong>($100 revision
+                                fee).</strong>
                         </div>
                     </div>
                 </div>
@@ -464,34 +412,12 @@
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
                         <div class="card-body" style="font-family: sans-serif;">
                             Yes, I offer hosting setup. After your website goes live, I can help with updates, security,
-                            performance optimization, and any technical support you need for 30 days.
+                            performance optimization, and any technical support you needs.
                         </div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-header" id="headingFour">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse"
-                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
-                                style="font-family: sans-serif;">
-                                For websites, do you provide ongoing hosting maintenance services after the initial 30
-                                days?
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
-                        <div class="card-body" style="font-family: sans-serif;">
-                            No. Once the 30 day technical support window is over, that marks the end of our partnership
-                            unless you choose to renew the 30 day maintenance plan <strong>(Renewal Fee is
-                                $150)</strong>. I do not offer
-                            ongoing maintenance
-                            services beyond the initial 30 days.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-header" id="headingFive">
                         <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse"
@@ -503,37 +429,15 @@
                     </div>
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqAccordion">
                         <div class="card-body" style="font-family: sans-serif;">
-                            No, you must have your own domain ready to use. If you need help finding one, I can refer
+                            Yes. I offer own domain ready to use. If you need help finding one, I can refer
                             you to some domain and hosting resources such as Bluehost, GoDaddy, etc.
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
 
-            <!-- this is my contact form section -->
-            <form action="/zoho-token" class="contact-form" method="POST" id="contactForm">
-                <h1>Contact me</h1>
-
-                <label for="firstName"></label>
-                <input type="text" id="firstName" name="firstName" placeholder="First Name">
-                <span class="error" id="fistNameError"></span>
-
-                <label for="lastName"></label>
-                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
-                <span class="error" id="lastNameError"></span>
-
-                <label for="email"></label>
-                <input type="text" id="email" name="email" placeholder="Email">
-                <span class="error" id="emailError"></span>
-
-                <label for="message"></label>
-                <textarea name="message" id="message" rows="10" cols="30" placeholder="Leave a message!"></textarea>
-                <span class="error" id="messageError"></span>
-
-                <input type="submit" value="Submit" id="submit">
-            </form>
 
 
         </article>
@@ -544,6 +448,28 @@
 
     <footer>
 
+        <!-- this is my contact form section -->
+        <form action="/zoho-token" class="contact-form" method="POST" id="contactForm">
+            <h1 id="contact-me-header">Contact me</h1>
+
+            <label for="firstName"></label>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name">
+            <span class="error" id="fistNameError"></span>
+
+            <label for="lastName"></label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+            <span class="error" id="lastNameError"></span>
+
+            <label for="email"></label>
+            <input type="text" id="email" name="email" placeholder="Email">
+            <span class="error" id="emailError"></span>
+
+            <label for="message"></label>
+            <textarea name="message" id="message" rows="10" cols="30" placeholder="Leave a message!"></textarea>
+            <span class="error" id="messageError"></span>
+
+            <input type="submit" value="Submit" id="submit">
+        </form>
 
         <!-- this section has links to linkedin, github, and legal pages -->
         <section>
@@ -584,7 +510,10 @@
                 </a>
             </div>
 
-            <p id="copyright">&copy; 2025 JBI Solutions. All rights reserved.</p>
+            <div id="copyright">
+
+                <p>&copy; 2025 JBI Solutions. All rights reserved.</p>
+            </div>
 
         </section>
 
