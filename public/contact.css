@@ -329,6 +329,10 @@
     .footer-item {
         padding: 10px;
     }
+
+    .legal-links a {
+        padding: 0.5rem 1rem;
+    }
 }
 
 body {
@@ -395,7 +399,6 @@ body {
 .legal-links a {
     text-decoration: none;
     color: white;
-    padding: 0.5rem 1rem;
     transition: all 0.3s ease;
 }
 
@@ -416,6 +419,18 @@ body {
 .legal-links a:hover {
     border-bottom: 2px solid black;
 }
+
+.contact-form {
+    text-align: center;
+}
+
+.contact-form h1 {
+    font-family: "Anitpasto-Bold-trial", sans-serif;
+    font-size: 50px;
+    margin-bottom: 0.5em;
+}
+
+
 
 footer {
     background-color: #526cff;

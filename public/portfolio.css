@@ -329,6 +329,10 @@
     .footer-item {
         padding: 10px;
     }
+
+    .legal-links a {
+        padding: 0.5rem 1rem;
+    }
 }
 
 
@@ -453,7 +457,6 @@ footer {
 .legal-links a {
     text-decoration: none;
     color: white;
-    padding: 0.5rem 1rem;
     transition: all 0.3s ease;
 }
 
