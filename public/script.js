@@ -16,8 +16,7 @@ contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     // Get form data
-    const firstName = document.getElementById("firstName").value.trim();
-    const lastName = document.getElementById("lastName").value.trim();
+    const fullName = document.getElementById("fullName").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
@@ -33,8 +32,7 @@ contactForm.addEventListener("submit", async (event) => {
 
         // 2️⃣ Build lead payload
         const leadData = {
-            First_Name: firstName,
-            Last_Name: lastName,
+            First_Name: fullName,
             Email: email,
             Description: message
         };
