@@ -428,9 +428,10 @@ body {
     border-bottom: 2px solid black;
 }
 
-.contact-form h2 {
+.contact-form h1 {
     font-family: "Anitpasto-Bold-trial", sans-serif;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 footer {
