@@ -774,6 +774,15 @@ footer {
     text-align: center;
 }
 
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
 .error {
     color: red;
     font-size: 0.9em;
