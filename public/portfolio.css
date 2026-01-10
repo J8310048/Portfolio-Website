@@ -72,14 +72,18 @@
     /* NAVIGATION MENU CODE END */
 
     #websiteCarousel,
-    #appCarousel {
+    #appCarousel,
+    #flyersCarousel,
+    #presentationsCarousel {
         font-family: "Anitpasto-Medium-trial", sans-serif;
         text-align: center;
         padding: 20% 0;
     }
 
     #websiteCarousel h1,
-    #appCarousel h1 {
+    #appCarousel h1,
+    #flyersCarousel h1,
+    #presentationsCarousel h1 {
         font-family: "Anitpasto-Bold-trial", sans-serif;
         margin-bottom: 10%;
     }
@@ -181,14 +185,18 @@
     /* NAVIGATION MENU CODE END */
 
     #websiteCarousel,
-    #appCarousel {
+    #appCarousel,
+    #flyersCarousel,
+    #presentationsCarousel {
         font-family: "Anitpasto-Medium-trial", sans-serif;
         text-align: center;
         padding: 20% 0;
     }
 
     #websiteCarousel h1,
-    #appCarousel h1 {
+    #appCarousel h1,
+    #flyersCarousel h1,
+    #presentationsCarousel h1 {
         font-family: "Anitpasto-Bold-trial", sans-serif;
         margin-bottom: 10%;
     }
@@ -294,7 +302,9 @@
     /* NAVIGATION MENU CODE END */
 
     #websiteCarousel,
-    #appCarousel {
+    #appCarousel,
+    #flyersCarousel,
+    #presentationsCarousel {
         text-align: center;
         padding-top: 10%;
     }
@@ -425,7 +435,9 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-#appCarousel {
+#appCarousel,
+#flyersCarousel,
+#presentationsCarousel {
     padding-bottom: 10%;
 }
 
